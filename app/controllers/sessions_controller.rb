@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
 
-    def logout 
-        sessions.delete[:user_id]
+    def destroy
+    #def logout
+        session.delete[:user_id]
         redirect_to new_user_path
     end 
 
