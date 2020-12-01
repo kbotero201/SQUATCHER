@@ -1,34 +1,3 @@
 <h1> Add New Sighting: </h1>
 
-<%= form_for @sightings do |f| %>
-  
-  <%= f.label %><br>
-  <%= f.text_field :date %><br>
-
-  <%= f.label %><br>
-  <%= f.text_area :location %><br>
-
-  <%= f.label %><br>
-  <%= f.text_area :location %><br>
-
-  <%= f.label %><br>
-  <%= f.text_area :creature_temperament %><br>
-
-  <%= f.label %><br>
-  <%= f.text_area :creature_temperament %><br>
-
-  <%= f.label %><br>
-  <%= f.number_field :fear_rating %><br>
-
-  <%= f.label %><br>
-  <%= f.text_area :description %><br>
-
-  <%= f.label %><br>
-  <%= f.collection select :cryptid_id, Cryptid.all, :id, :name %> <br>
-
- <%#  user_id %>
- <%#  expedition_id %>
-
-  <%= f.submit %>
-<% end %>
-
+<%= render 'form' %>

@@ -1,3 +1,19 @@
 <h1> <%= @user.name %> </h1>
-<p> <%= @user.years_experience  %> </p>
+<p>Years as a cryptozoologist: <%= @user.years_experience  %> </p>
+
+<hr>
+<h4>Expeditions</h4>
+<ul>
+<% @user.expeditions.each do |expedition| %>
+<li><%= link_to  expedition.region, expedition_path(expedition) %>: <%= expedition.days %> Days
+    <p>Sightings:</p>
+    <ul> <% expedition.sightings.each do |sighting| %>
+        <li><%= link_to sighting.cryptid.name, sighting_path(sighting) %></li>
+        <% end %>
+    </ul>
+</li>
+
+
+<% end %>
+</ul>
 

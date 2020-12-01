@@ -1,4 +1,4 @@
 <h1> <% @cryptids.each do |cryptid| %> </h1>
-<div> <%= cryptid.name %> <div>
+<div> <%= link_to cryptid.name, cryptid_path(cryptid) %> <div>
 <% end %> 
 

@@ -1,5 +1,7 @@
 class ExpeditionsController < ApplicationController
 
+
+
     def index
         @expeditions = Expedition.all
     end
