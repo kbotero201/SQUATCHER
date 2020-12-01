@@ -1,12 +1,21 @@
+
 <h1> Login: </h1>
 
+<ul>
+    <% flash.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+
 <%= form_for :session, url: login_path do |f| %>
-<%= f.label :name %>
+<%= f.label "Username" %>
 <%= f.text_field :name  %>
 
 <%= f.label :password %>
-<%= f.text_field :password %>
+<%= f.password_field :password %>
 
-<%= f.submit  %>
+<%= f.submit 'Login'  %>
 
 <% end  %>
+
