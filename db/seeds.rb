@@ -14,7 +14,7 @@ Sighting.destroy_all
 puts "Assets Destroyed"
 
 
-20.times {User.create(name: Faker::Books::Dune.unique.character, years_experience: rand(0..30), password_digest: "asdkjnwd2129821")}
+20.times {User.create(name: Faker::Books::Dune.unique.character, years_experience: rand(0..30), password: )}
 puts "20 Users created"
 
 Cryptid.create(name: "Ozark Howler", description: Faker::Lorem.paragraph)
