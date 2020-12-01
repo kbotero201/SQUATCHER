@@ -1,0 +1,13 @@
+<h1> New User: </h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label  %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label  %><br>
+  <%= f.text_area :years_experience %><br>
+
+  <%= f.submit %>
+<% end %>
+
+
