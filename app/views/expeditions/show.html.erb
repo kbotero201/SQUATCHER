@@ -1,0 +1,7 @@
+<h1> <%= @expedition.region %> </h1> 
+<h4> <%= @expedition.season %> - <%= @expedition.days %> Days</h4>
+<ul><% @expedition.sightings.each do |sighting| %>
+<li><%= sighting.cryptid.name %></li> 
+<% end %>
+</ul>
+

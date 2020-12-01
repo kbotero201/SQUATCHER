@@ -1,0 +1,7 @@
+
+<h1> Sightings: </h1>
+
+<% @sightings.each do |sighting| %> 
+<div> <%= sighting.location %> - <%= sighting.cryptid.name %> <div>
+<% end %>
+

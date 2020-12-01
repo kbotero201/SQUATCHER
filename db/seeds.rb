@@ -14,8 +14,8 @@ Sighting.destroy_all
 puts "Assets Destroyed"
 
 
-40.times {User.create(name: Faker::Books::Dune.character, years_experience: rand(0..30))}
-puts "40 Users created"
+20.times {User.create(name: Faker::Books::Dune.unique.character, years_experience: rand(0..30))}
+puts "20 Users created"
 
 Cryptid.create(name: "Ozark Howler")
 Cryptid.create(name: "Fouke Monster")
@@ -44,7 +44,7 @@ puts "22 Cryptids Created"
 
 seasons = ["Spring", "Summer", "Fall", "Winter"]
 regions = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"] 
-60.times {Expedition.create(days: rand(1..15), season: seasons.sample, region: regions.sample, user_id: User.all.sample)}
+60.times {Expedition.create(days: rand(1..15), season: seasons.sample, region: regions.sample, user_id: User.all.sample.id)}
 puts "60 Expeditions Created"
 
 temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"]
@@ -53,10 +53,10 @@ temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curiou
         location: Faker::Mountain.name, 
         creature_temperament: temperament.sample, 
         fear_rating: rand(1..10), 
-        discription: Faker::Lorem.paragraph, 
-        expedition_id: Expedition.all.sample, 
-        user: User.all.sample, 
-        cryptid_id: Cryptid.all.sample)}
+        description: Faker::Lorem.paragraph, 
+        expedition_id: Expedition.all.sample.id, 
+        user_id: User.all.sample.id, 
+        cryptid_id: Cryptid.all.sample.id)}
 
 
 40.times {Sighting.create(
@@ -64,9 +64,9 @@ temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curiou
         location: Faker::Mountain.name, 
         creature_temperament: temperament.sample, 
         fear_rating: rand(1..10), 
-        discription: Faker::Lorem.paragraph, 
-        expedition_id: Expedition.all.sample, 
-        user: User.all.sample, 
+        description: Faker::Lorem.paragraph, 
+        expedition_id: Expedition.all.sample.id, 
+        user_id: User.all.sample.id, 
         cryptid_id: bigfoot.id)}
 
 puts "Sightings Created"
