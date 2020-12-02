@@ -11,6 +11,8 @@
 
   <body>
     <ul class="nav">
+      <li><%= link_to "Home", users_path %></li>
+      <li><%= link_to "Profile", user_path(@current_user) %></li>
       <li><%= link_to "Cryptid Handook", cryptids_path %></li>
       <li><%= link_to "New Expedition", new_expedition_path %></li>
       <li><%= link_to "New Sighting",  new_sighting_path %></li>
