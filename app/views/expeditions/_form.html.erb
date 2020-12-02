@@ -1,19 +1,22 @@
-<% @seasons = ["Spring", "Summer", "Fall", "Winter"] %>
+  <% @seasons = ["Spring", "Summer", "Fall", "Winter"] %>
 
- <% @regions = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"] %> 
+  <% @regions = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"] %> 
 
 <%= form_for @expedition do |f| %>
-  
-  <%= f.label 'Date' %><br>
-  <%= f.text_field :days %><br><br>
-
-  <%= f.label 'Season' %><br>
-  <%= f.collection_select :season, @seasons, :to_s, :to_s %><br><br>
-
-  <%= f.label 'Region' %><br>
-  <%= f.collection_select :region, @regions, :to_s, :to_s %><br><br>
+  <div class="form-input">
+    <%= f.label 'Date' %><br>
+    <%= f.text_field :days %><br><br>
+  </div>
+  <div class="form-input">
+    <%= f.label 'Season' %><br>
+    <%= f.collection_select :season, @seasons, :to_s, :to_s %><br><br>
+  </div>
+  <div class="form-input">
+    <%= f.label 'Region' %><br>
+    <%= f.collection_select :region, @regions, :to_s, :to_s %><br><br>
+  </div>
 
 
 <br>
-  <%= f.submit %>
+  <%= f.submit class: "form-btn"%>
 <% end %>
