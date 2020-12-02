@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
     def authorized
         redirect_to new_user_path unless @current_user
-      end 
+    end 
 
 
 end
