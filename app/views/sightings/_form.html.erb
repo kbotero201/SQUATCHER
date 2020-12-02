@@ -4,32 +4,34 @@
  <% @temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"] %>
  
   
-  <%= f.label "Date" %><br>
-  <%= f.text_field :date %><br>
+  <%= f.label 'date' %><br>
+  <%= f.text_field(:date, html_options = {class: 'datepicker', placeholder: 'mm/dd/yyyy' }) %><br><br>
 
   <%= f.label 'Location' %><br>
-  <%= f.text_area :location %><br>
+  <%= f.text_area :location %><br><br>
 
   <%= f.label "Creature Temperament" %><br>
   <%= f.collection_select :creature_temperament, @temperament, :to_s, :to_s %><br>
 
   <%= f.label 'Fear Rating'%><br>
-  <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %><br>
+  <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %><br><br>
 
   <%= f.label "Description"%><br>
-  <%= f.text_area :description %><br>
+  <%= f.text_area :description %><br><br>
 
   <%= f.label "Cryptid" %><br>
-  <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name%> <br>
+  <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name%> <br><br>
 
  <%# repurpose so that expedition id from prev page auto populates  %>
   <%= f.label'Expedition' %><br>
   <%= f.collection_select :expedition_id, Expedition.all, :id, :region %> <br>
   <%# f.collection_select :expedition_id, current_user.expeditions.all, :id, :region %> <br>
 
-  <%= f.label 'User' %><br>
-  <%= f.collection_select :user_id, User.all, :name, :name %><br><br>
-  <%# f.hidden_field :user_id, :value => current_user.id %>
+  <%# f.label 'User' %><br>
+  <%# f.collection_select :user_id, User.all, :name, :name %><br><br>
+  
+  
+  <% f.hidden_field :user_id, :value => @current_user.id %>
  
 
   <%= f.submit %>

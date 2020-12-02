@@ -14,6 +14,14 @@
  *= require_self
  */
 
+
+class: 'form-control datepicker'
+@import "pickadate/default";
+@import "pickadate/default.date";  
+@import "pickadate/default.time"; 
+
+
+
  body {
     /* background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
     background-repeat: no-repeat;
@@ -21,6 +29,8 @@
  
     background-color: rgba(254, 250, 224, 1)
   }
+
+
  
  
    /* ---------------------- CSS for Navbar and Banner -------------------- */
