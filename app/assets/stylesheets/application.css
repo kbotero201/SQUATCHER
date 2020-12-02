@@ -53,12 +53,13 @@
    
    
     .nav {
-     background-color: rgba(96, 108, 56, 1);
+     background-color: rgba(188, 108, 37, 1);
      
      height: 30px;
      width: 90%;
      margin: 0px auto;
      padding: 0px;
+     border-radius: 10px;
    }
    
     .nav li {
