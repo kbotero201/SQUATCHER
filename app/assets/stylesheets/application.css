@@ -13,3 +13,225 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    /* background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+ 
+    background-color: rgba(1, 80, 113, 0.4)
+  }
+ 
+ 
+   /* ---------------------- CSS for Navbar and Banner -------------------- */
+ 
+ 
+   .banner-img {
+     width: 100%;
+     max-height: 200px;
+    }
+   
+    .banner {
+      width: 90%;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px auto;
+    }
+ 
+    #banner-header {
+     margin: 0px;
+     font-size: 5em;
+     color: transparent;
+     -webkit-text-stroke: 2px rgb(0, 199, 249);
+     /* line-height: 200px; */
+   }
+  
+   
+   
+    .nav {
+     background-color: rgba(62, 7, 79, 0.8);
+     
+     height: 30px;
+     width: 90%;
+     margin: 0px auto;
+     padding: 0px;
+   }
+   
+    .nav li {
+      /* border: 1px solid black; */
+      display: inline-block;
+      line-height: 30px;
+      padding: 0px 15px;
+      margin: 0px;
+   
+    }
+   
+    .nav li:hover {
+      background-color: rgba(255,255,255,0.4);
+      transition: 1s;
+    }
+   
+    .nav li a {
+     text-decoration: none;
+     color: whitesmoke;
+     font-weight: 800;
+   }
+   
+   
+   .right {
+     float: right;
+   }
+ 
+   /* --------------CSS for background on every page --------------------- */
+ 
+ .container {
+   margin: 5px auto;
+   max-width: 87%;
+   background-color: rgba(255,255,255,0.4);
+   padding: 10px;
+   border-radius: 25px;
+   height: 100%;
+ }
+ 
+ /* ------------- CSS for Forms ------------ */
+ 
+ .form-container {
+   max-width: 300px;
+   margin: 0px auto;
+   background-color: rgba(62, 7, 79, 0.2);
+   padding: 20px;
+   border-radius: 25px;
+   text-align: center;
+ }
+ 
+ .form-btn {
+   background-color: purple;
+   margin-top: 10px;
+   border-radius: 25px;
+ }
+ 
+ .form-input {
+   margin-top: 10px;
+ }
+ 
+ 
+   /*------------------------Index Page CSS ----------------------  */
+ 
+  .index-container {
+   max-height: 100vh;
+   overflow: scroll;
+   display: flex;
+   flex-flow: row wrap;
+   /* background-color: rgba(255,255,255,0.4); */
+   padding: 0px 10px 0px 10px;
+   margin: 0px auto;
+   border-radius: 25px; 
+   justify-content: space-evenly;
+ }
+ 
+ .index-tile {
+   background-color: rgba(62, 7, 79, 0.2);
+   text-align: center;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 25px; 
+ }
+ 
+ .index-tile:hover {
+   border: 3px solid rgb(62, 7, 79); 
+   background-color: rgba(62, 7, 79, 0.2);
+ }
+ 
+ .index-tile h3 a {
+   text-decoration: none;
+   color: rgb(62, 7, 79);
+   font-weight: 1200;
+ }
+ 
+ .index-img {
+   max-width: 150px;
+ }
+ .show-img {
+   max-width: 250px;
+ }
+ 
+ .index-tile a {
+   text-decoration: none;
+ }
+ 
+ 
+ .show-container {
+   background-color: rgba(255,255,255,0.4);
+   padding: 10px;
+   border-radius: 25px;
+   
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* CSS HEX */
+--dark-olive-green: #606c38ff;
+--kombu-green: #283618ff;
+--cornsilk: #fefae0ff;
+--fawn: #dda15eff;
+--liver-dogs: #bc6c25ff;
+
+/* CSS HSL */
+--dark-olive-green: hsla(74, 32%, 32%, 1);
+--kombu-green: hsla(88, 38%, 15%, 1);
+--cornsilk: hsla(52, 94%, 94%, 1);
+--fawn: hsla(32, 65%, 62%, 1);
+--liver-dogs: hsla(28, 67%, 44%, 1);
+
+/* SCSS HEX */
+$dark-olive-green: #606c38ff;
+$kombu-green: #283618ff;
+$cornsilk: #fefae0ff;
+$fawn: #dda15eff;
+$liver-dogs: #bc6c25ff;
+
+/* SCSS HSL */
+$dark-olive-green: hsla(74, 32%, 32%, 1);
+$kombu-green: hsla(88, 38%, 15%, 1);
+$cornsilk: hsla(52, 94%, 94%, 1);
+$fawn: hsla(32, 65%, 62%, 1);
+$liver-dogs: hsla(28, 67%, 44%, 1);
+
+/* SCSS RGB */
+$dark-olive-green: rgba(96, 108, 56, 1);
+$kombu-green: rgba(40, 54, 24, 1);
+$cornsilk: rgba(254, 250, 224, 1);
+$fawn: rgba(221, 161, 94, 1);
+$liver-dogs: rgba(188, 108, 37, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-right: linear-gradient(90deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom: linear-gradient(180deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-left: linear-gradient(270deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-top-right: linear-gradient(45deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom-right: linear-gradient(135deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-top-left: linear-gradient(225deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom-left: linear-gradient(315deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-radial: radial-gradient(#606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
