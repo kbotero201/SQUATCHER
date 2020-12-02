@@ -19,7 +19,7 @@
     background-repeat: no-repeat;
     background-size: cover; */
  
-    background-color: rgba(1, 80, 113, 0.4)
+    background-color: rgba(254, 250, 224, 1)
   }
  
  
@@ -36,7 +36,7 @@
       height: 200px;
       line-height: 200px;
       text-align: center;
-      background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
+      background-image: url("https://i.ibb.co/5xt25ds/bigfoot-banner-gettyimages-1094732092.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       margin: 0px auto;
@@ -53,7 +53,7 @@
    
    
     .nav {
-     background-color: rgba(62, 7, 79, 0.8);
+     background-color: rgba(96, 108, 56, 1);
      
      height: 30px;
      width: 90%;
@@ -91,7 +91,7 @@
  .container {
    margin: 5px auto;
    max-width: 87%;
-   background-color: rgba(255,255,255,0.4);
+   background-color: rgba(40, 54, 24, 1);
    padding: 10px;
    border-radius: 25px;
    height: 100%;
@@ -123,27 +123,27 @@
  
   .index-container {
    max-height: 100vh;
-   overflow: scroll;
-   display: flex;
-   flex-flow: row wrap;
-   /* background-color: rgba(255,255,255,0.4); */
-   padding: 0px 10px 0px 10px;
-   margin: 0px auto;
-   border-radius: 25px; 
-   justify-content: space-evenly;
+   /* overflow: auto;  */
+   /* display: flex; */
+   /* flex-flow: row wrap; */
+   background-color: rgba(96, 108, 56, 1);
+   /* padding: 10px 100px 50px 10px;
+   margin: 0px auto; */
+   border-radius: 10px;
+   justify-content: space-evenly; 
  }
  
  .index-tile {
-   background-color: rgba(62, 7, 79, 0.2);
+   background-color: rgba(221, 161, 94, 1);
    text-align: center;
-   padding: 10px;
-   margin: 10px;
-   border-radius: 25px; 
+   padding: 2px;
+   margin: 5px;
+   border-radius: 30px; 
  }
  
  .index-tile:hover {
-   border: 3px solid rgb(62, 7, 79); 
-   background-color: rgba(62, 7, 79, 0.2);
+   /* border: 3px solid rgb(62, 7, 79);  */
+   background-color: rgba(221, 161, 94, 1);
  }
  
  .index-tile h3 a {

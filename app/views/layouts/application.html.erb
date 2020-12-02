@@ -12,14 +12,15 @@
   <body>
     <ul class="nav">
       <li><%= link_to "Home", users_path %></li>
-      <li><%= link_to "Profile", user_path(@current_user) %></li>
       <li><%= link_to "Cryptid Handook", cryptids_path %></li>
-      <li><%= link_to "New Expedition", new_expedition_path %></li>
-      <li><%= link_to "New Sighting",  new_sighting_path %></li>
+  
 
       <% if @current_user %>
         <li class="right"><%= link_to "Logout", logout_path, method: :delete  %></li>
         <li class="right">Welcome, <%= @current_user.name %></li>
+        <li><%= link_to "New Expedition", new_expedition_path %></li>
+        <li><%= link_to "New Sighting",  new_sighting_path %></li>
+        <li><%= link_to "Profile", user_path(@current_user) %></li>
       <% else %>
         <li class="right"><%= link_to "Sign Up", new_user_path %></li>
         <li class="right"><%= link_to "Login", new_login_path %></li>

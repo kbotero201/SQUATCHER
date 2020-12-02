@@ -1,6 +1,8 @@
-<h1>Cryptids</h1>
-
-<h1> <% @cryptids.each do |cryptid| %> </h1>
-<div> <%= link_to cryptid.name, cryptid_path(cryptid) %> <div>
-<% end %> 
+<div class='index-container'>
+<% @cryptids.each do |cryptid| %> 
+    <div class='index-tile'>
+    <h3><%= link_to cryptid.name, cryptid_path(cryptid) %></h3>
+    </div>  
+    <% end %> 
+</div>
 
