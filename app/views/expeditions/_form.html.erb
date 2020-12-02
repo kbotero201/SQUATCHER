@@ -13,15 +13,6 @@
   <%= f.label 'Region' %><br>
   <%= f.collection_select :region, @regions, :to_s, :to_s %><br><br>
 
-  <%= f.label 'User' %><br>
-  <%= f.collection_select :user_id, User.all, :name, :name %><br><br>
-
-
-
-
-  <%# f.hidden_field :user_id, :value => current_user.id %>
-
- <%#  user_id %>
 
 <br>
   <%= f.submit %>
