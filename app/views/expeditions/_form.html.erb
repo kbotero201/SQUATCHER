@@ -4,8 +4,8 @@
 
 <%= form_for @expedition do |f| %>
   <div class="form-input">
-    <%= f.label 'Date' %><br>
-    <%= f.text_field :days %><br><br>
+    <%= f.label 'Length of Expedition (days):' %><br>
+    <%= f.number_field(:days, html_options = { placeholder: 'Ex: 14' }) %><br><br>
   </div>
   <div class="form-input">
     <%= f.label 'Season' %><br>
