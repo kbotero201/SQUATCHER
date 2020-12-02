@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_190422) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
   end
+  
 
   create_table "expeditions", force: :cascade do |t|
     t.integer "days"
