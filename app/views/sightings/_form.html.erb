@@ -3,35 +3,44 @@
  <%  @fear = [1,2,3,4,5,6,7,8,9,10] %>
  <% @temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"] %>
  
-  
-  <%= f.label "Date" %><br>
-  <%= f.text_field :date %><br>
-
-  <%= f.label 'Location' %><br>
-  <%= f.text_area :location %><br>
-
-  <%= f.label "Creature Temperament" %><br>
-  <%= f.collection_select :creature_temperament, @temperament, :to_s, :to_s %><br>
-
-  <%= f.label 'Fear Rating'%><br>
-  <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %><br>
-
-  <%= f.label "Description"%><br>
-  <%= f.text_area :description %><br>
-
-  <%= f.label "Cryptid" %><br>
-  <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name%> <br>
+  <div class="form-input">
+    <%= f.label "Date" %><br>
+    <%= f.text_field :date %><br>
+  </div>
+  <div class="form-input">
+    <%= f.label 'Location' %><br>
+    <%= f.text_area :location %><br>
+  </div>
+  <div class="form-input">
+    <%= f.label "Creature Temperament" %><br>
+    <%= f.collection_select :creature_temperament, @temperament, :to_s, :to_s %><br>
+  </div>
+  <div class="form-input">
+    <%= f.label 'Fear Rating'%><br>
+    <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %><br>
+  </div>
+  <div class="form-input">
+    <%= f.label "Description"%><br>
+    <%= f.text_area :description %><br>
+  </div>
+  <div class="form-input">
+    <%= f.label "Cryptid" %><br>
+    <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name%> <br>
+  </div>
 
  <%# repurpose so that expedition id from prev page auto populates  %>
-  <%= f.label'Expedition' %><br>
-  <%= f.collection_select :expedition_id, Expedition.all, :id, :region %> <br>
+  <div class="form-input">
+    <%= f.label'Expedition' %><br>
+    <%= f.collection_select :expedition_id, Expedition.all, :id, :region %> <br>
+  </div>
   <%# f.collection_select :expedition_id, current_user.expeditions.all, :id, :region %> <br>
-
-  <%= f.label 'User' %><br>
-  <%= f.collection_select :user_id, User.all, :name, :name %><br><br>
-  <%# f.hidden_field :user_id, :value => current_user.id %>
+  <div class="form-input">
+    <%= f.label 'User' %><br>
+    <%= f.collection_select :user_id, User.all, :name, :name %><br><br>
+    <%# f.hidden_field :user_id, :value => current_user.id %>
+  </div>
  
 
-  <%= f.submit %>
+  <%= f.submit class: "form-btn" %>
 <% end %>
 
