@@ -10,7 +10,7 @@ Rails.application.routes.draw do
    get "/sessions/new", to: 'sessions#new', as: 'new_login'
    post '/sessions/login', to: 'sessions#login', as: 'login'
    
-   get
+   
 
   #  get 'sessions/logout', to: 'sessions#logout', as: 'now_logout'
   # delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
