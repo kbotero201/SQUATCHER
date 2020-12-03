@@ -45,7 +45,7 @@
       height: 200px;
       line-height: 200px;
       text-align: center;
-      background-image: url("https://i.ibb.co/5xt25ds/bigfoot-banner-gettyimages-1094732092.jpg");
+      background-image: url("/app/assets/images/Forest_trees_dark_low.png");
       background-repeat: no-repeat;
       background-size: cover;
       margin: 0px auto;
@@ -53,6 +53,7 @@
  
     #banner-header {
      margin: 0px;
+     font-family: fantasy;
      font-size: 5em;
      color: transparent;
      -webkit-text-stroke: 2px rgb(0, 199, 249);
