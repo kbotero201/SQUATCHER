@@ -1,20 +1,35 @@
-<h1> <%= @cryptid.name %> </h1>
 
-<div><%= @cryptid.description %></div>
+<div class="parent">
 
-<hr>
-<h4>Sightings</h4>
-<ul><% @cryptid.sightings.each do |sighting| %>
-<li>Date: <%= sighting.date %></li>
-    <ul>
-    <li>Location: <%= sighting.location%></li>
-    <li>Temperament: <%= sighting.creature_temperament %></li>
-    <li>Fear Instilled: <%= sighting.fear_rating %> out of 10</li>
 
-    
-    </ul>
+<div class='div1'>
+    <h1> <%= @cryptid.name %> </h1>
+    <br>
+    <%= @cryptid.description %>
+</div>
+
+
+
+
+<div class='div2'></div><h4>Recent Sightings</h4>
+
+    <ul class='no-bullets'>
+        <% @cryptid.sightings.each do |sighting| %>
+        <li>Date: <%= sighting.date %></li>
+        <ul>
+            <li>Location: <%= sighting.location%></li>
+            <li>Temperament: <%= sighting.creature_temperament %></li>
+            <li>Fear Instilled: <%= sighting.fear_rating %> out of 10</li>
+        </ul>
     <% end %>
-    </ul>
+</ul>
+
+</div>
+
+
+<div class='div3'></div>
+</div>
+
 
 
 

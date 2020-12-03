@@ -2,16 +2,22 @@
 <p>Years as a cryptozoologist: <%= @user.years_experience  %> </p>
 
 <hr>
-<h4>Expeditions</h4>
+
+
+<h2>Expeditions</h2>
 <ul>
 <% @user.expeditions.each do |expedition| %>
-<li><%= link_to  expedition.region, expedition_path(expedition) %>: <%= expedition.days %> Days
-    <p>Sightings:</p>
+<li>
+<div class='show-tile'></div>
+<%= link_to  expedition.region, expedition_path(expedition) %>: <%= expedition.days %> Days
+    <p class='show-tile-'>Sightings:</p>
     <ul> <% expedition.sightings.each do |sighting| %>
         <li><%= link_to sighting.cryptid.name, sighting_path(sighting) %></li>
         <% end %>
     </ul>
+</div>
 </li>
+
 
 
 <% @user.sightings.each do |expedition| %>

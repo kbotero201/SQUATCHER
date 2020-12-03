@@ -6,5 +6,7 @@ class User < ApplicationRecord
     validates :years_experience, presence: true 
     has_secure_password
 
+    before_create { |user| user.name = user.name.capitalize }
+
 
 end
