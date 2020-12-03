@@ -1,3 +1,337 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+// Variables
+
+$font-family-fallback: sans-serif;
+$font-family: 'Source Sans Pro';
+$font-size: 1em;
+$font-weight: 400;
+
+$line-height: 1.5em;
+
+$headings-font-weight: 600;
+$h1-font-size: 2.5em;
+$h2-font-size: 1.5em;
+$h3-font-size: 1.25em;
+
+// Colors
+
+$color: #7e7e7e;
+$color-bg: #32425a;
+
+$color-primary: #ce606f;
+
+$color-link: $color-primary;
+$color-headings: #fff;
+
+$color-subline: #768191;
+
+$color-box-header: #fff;
+$color-box-header-bg: $color-primary;
+$color-box-main: $color;
+$color-box-main-bg: #fff;
+
+$color-marker-bg: $color-primary;
+
+// Base
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+}
+
+body {
+  background-color: $color-bg;
+  color: $color;
+  font: $font-weight #{$font-size}/#{$line-height} $font-family, $font-family-fallback;
+  margin: 0;
+}
+
+a {
+  color: $color-link;
+}
+
+h1,
+h2,
+h3 {
+  color: $color-headings;
+  font-weight: $headings-font-weight;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+  margin: 0 0 .2em;
+}
+
+h2,
+.h2 {
+  font-size: $h2-font-size;
+  margin: 0 0 .33em;
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size;
+  margin: 0 0 .5em;
+}
+
+p {
+  margin: .5em 0;
+}
+
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+// Heplers
+
+.text-center {
+  text-align: center;
+}
+
+.subline {
+  color: $color-subline;
+  font-weight: normal;
+}
+
+// rid
+
+.container {
+  left: 50%;
+  max-width: 740px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+// Map
+
+.map {
+  margin-top: 3em;
+  position: relative;
+
+  &-markers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-marker {
+    position: absolute;
+
+    &:after {
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-name: pop;
+      border-radius: 50%;
+      border: 1px solid $color-primary;
+      content: '';
+      height: 2em;
+      left: 0;
+      margin: -.5em 0 0 -.5em;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 2em;
+    }
+
+    &:hover {
+
+      .map-marker-info {
+        display: block;
+      }
+
+    }
+
+    a {
+      background-color: $color-marker-bg;
+      border-radius: 50%;
+      height: 1em;
+      display: block;
+      text-indent: -9999px;
+      width: 1em;
+    }
+
+  }
+
+  &-marker-chicago {
+    left: 65%;
+    top: 35%;
+  }
+
+  &-marker-florida {
+    left: 85%;
+    top: 86%;
+
+    &:after {
+      animation-delay: 3s;
+    }
+
+  }
+
+  &-marker-los-angeles {
+    left: 7%;
+    top: 60%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-new-york {
+    left: 91%;
+    top: 31%;
+  }
+
+  &-marker-san-francisco {
+    left: 1%;
+    top: 46%;
+
+    &:after {
+      animation-delay: 3s;
+    }
+
+  }
+
+  &-marker-seattle {
+    left: 8%;
+    top: 1%;
+
+    &:after {
+      animation-delay: 5s;
+    }
+
+  }
+
+  &-marker-info {
+    display: none;
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%, -2em);
+    width: 20em;
+    z-index: 999;
+
+    header {
+      background-color: $color-box-header-bg;
+      border-radius: .5em .5em 0 0;
+      color: $color-box-header;
+      padding: .5em 1em;
+    }
+
+    main {
+      background-color: $color-box-main-bg;
+      border-radius: 0 0 .5em .5em;
+      color: $color-box-main;
+      padding: .5em 1em;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    &-inner {
+      border-radius: .5em;
+      box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+      font-size: .875em;
+
+      &:after {
+        border-left: .75em solid transparent;
+        border-right: .75em solid transparent;
+        border-top: 1em solid #fff;
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: 100%;
+        transform: translateX(-50%);
+        width: 0;
+      }
+
+    }
+
+  }
+
+}
+
+// Animations
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes bounce-in {
+
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transition-timing-function: cubic-bezier(.215, .610, .355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+
+}
+
+.animate-bounce-in {
+  animation-duration: .75s;
+  animation-name: bounce-in;
+}
+
+@keyframes pop {
+
+  0% {
+    transform: scale(0);
+  }
+
+  8% {
+    opacity: .4;
+  }
+
+  10% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+}
+
+.animate-pop {
+  animation-duration: 1s;
+  animation-name: pop;
+}
