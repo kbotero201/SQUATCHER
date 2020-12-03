@@ -43,8 +43,8 @@ bigfoot = Cryptid.create(name: "Sasquatch", description: "The Sasquatch is a t
 puts "22 Cryptids Created"
 
 seasons = ["Spring", "Summer", "Fall", "Winter"]
-regions = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"] 
-60.times {Expedition.create(days: rand(1..15), season: seasons.sample, region: regions.sample, user_id: User.all.sample.id)}
+regions = ["Pacific Northwest", "Southwest", "Midwest", "Northeast", "Southeast"] 
+60.times {Expedition.create(days: rand(1..15), season: seasons.sample, region: regions.sample, user_id: User.all.sample.id, name: Faker::Kpop.unique.boy_bands)}
 puts "60 Expeditions Created"
 
 temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"]

@@ -5,24 +5,24 @@ class Expedition < ApplicationRecord
     validates :days, presence: true, numericality: true
 
 
-    def self.california
-        Expedition.all.select {|exp| exp.region == "California"}.count
+    def self.pacific_northwest
+        Expedition.all.select {|exp| exp.region == "Pacific Northwest"}.count
     end 
 
-    def self.new_york
-        Expedition.all.select {|exp| exp.region == "New York"}.count
+    def self.midwest
+        Expedition.all.select {|exp| exp.region == "Midwest"}.count
     end 
 
-    def self.illinois
-        Expedition.all.select {|exp| exp.region == "Illinois"}.count
+    def self.northest
+        Expedition.all.select {|exp| exp.region == "Northeast"}.count
     end 
 
-    def self.washington
-        Expedition.all.select {|exp| exp.region == "Washington"}.count
+    def self.southeast
+        Expedition.all.select {|exp| exp.region == "Southeast"}.count
     end 
 
-    def self.florida
-        Expedition.all.select {|exp| exp.region == "Florida"}.count
+    def self.southwest
+        Expedition.all.select {|exp| exp.region == "Southwest"}.count
     end 
 
 
