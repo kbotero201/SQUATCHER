@@ -14,6 +14,13 @@
  *= require_self
  */
 
+
+@import "pickadate/default";
+@import "pickadate/default.date";  
+@import "pickadate/default.time"; 
+
+
+
  body {
     /* background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
     background-repeat: no-repeat;
@@ -21,6 +28,8 @@
  
     background-color: rgba(254, 250, 224, 1)
   }
+
+
  
  
    /* ---------------------- CSS for Navbar and Banner -------------------- */
@@ -171,6 +180,58 @@
    border-radius: 25px;
    
  }
+
+ @import "compass/css3";
+
+ .btn {
+   display: inline-block;
+   padding: 0.5em 1em;
+   background: #808080;
+   color: #fff;
+   margin: 1em;
+   &:hover,
+   &:focus {
+     color: #fff;
+     background: #333;
+   }
+ }
+ 
+ .static-img {
+   display: block;
+ }
+ 
+ iframe {
+   max-width: 100%;
+ }
+ /* From https://codepen.io/chriscoyier/full/kycDp */
+ .map-container {
+   width: 100%;
+   margin: 0 auto;
+   height: 0;
+   padding-top: 38%;
+   position: relative;
+   display: none; /* Hide for small screens */
+   iframe {
+     width: 100%;
+     height: 100%; /* had to specify height/width */
+     position: absolute;
+     top: 0;
+     right: 0;
+     left: 0;
+     bottom: 0;
+   }
+ }
+ 
+ /* Medium Screens */
+ @media all and (min-width: 34.375em) {
+   .map-container {
+     display: block;
+   }
+   .static-img {
+     display: none;
+   }
+ }
+ 
 
 
 

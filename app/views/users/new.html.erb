@@ -1,3 +1,11 @@
+<% if flash[:user_errors] %>
+<ul>
+<% flash[:user_errors].each do |error| %>
+<li> <%= error %> </li>
+<% end %>
+</ul>
+<% end  %>
+
 <h1> New User: </h1>
 
 <%= form_for @user do |f| %>
@@ -5,7 +13,7 @@
   <%= f.text_field :name %><br>
 
   <%= f.label 'Years Experience' %><br>
-  <%= f.text_field :years_experience %><br>
+  <%= f.number_field :years_experience %><br>
 
   <%= f.label 'Password'  %><br>
   <%= f.text_field :password %><br>

@@ -14,5 +14,10 @@
 </li>
 
 
+<% @user.sightings.each do |expedition| %>
+<%= expedition.location %>
+<% end  %>
+
+
 <% end %>
 </ul>
