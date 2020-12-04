@@ -1,3 +1,9 @@
+<div class="monster"></div>
+
+<br>
+<br>
+
+
 <% if flash[:user_errors] %>
 <ul>
 <% flash[:user_errors].each do |error| %>
@@ -6,7 +12,7 @@
 </ul>
 <% end  %>
 
-<h1> New User: </h1>
+<h1> Sign Up: </h1>
 
 <%= form_for @user do |f| %>
   <%= f.label  'Username'%><br>
@@ -16,7 +22,9 @@
   <%= f.number_field :years_experience %><br>
 
   <%= f.label 'Password'  %><br>
-  <%= f.text_field :password %><br>
+  <%= f.text_field :password %><br><br>
 
   <%= f.submit %>
+
+
 <% end %>
