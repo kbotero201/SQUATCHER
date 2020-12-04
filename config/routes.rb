@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :expeditions
   resources :users
   resources :cryptids
-  resources :sessions
+  # resources :sessions
 
 
   #  delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #  post '/sessions/login', to: 'sessions#login', as: 'login'
    
 
-  delete "/sessions/logout", to: 'sessions#logout', as: 'logout'
+  get "/sessions/logout", to: 'sessions#logout', as: 'logout'
   get "/sessions/new", to: 'sessions#new', as: 'new_login'
   post '/sessions/login', to: 'sessions#login', as: 'login'
    
