@@ -24,7 +24,7 @@
         <li><%= link_to "New Expedition", new_expedition_path %></li>
         <li><%= link_to "New Sighting",  new_sighting_path %></li>
 
-        <li class="right"><%= link_to "Logout", logout_path, method: :delete  %></li>
+        <li class="right"><%= link_to "Logout", logout_path %></li>
         <li class="right">Welcome, <%= link_to @current_user.name, user_path(@current_user) %></li>
         
       <% else %>
