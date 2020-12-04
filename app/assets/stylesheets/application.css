@@ -27,7 +27,7 @@
     background-repeat: no-repeat;
     background-size: cover; */
  
-    background-color: rgba(254, 250, 224, 1);
+    background-color: rgb(255, 255, 255);
     color: whitesmoke;
 
 
@@ -185,7 +185,7 @@
    overflow: auto; 
    display: flexbox;
    flex-flow: row wrap;
-   background-color: rgba(96, 108, 56, 1);
+   background-color: rgba(254, 250, 224, 1);
    padding: 25px;
    margin: 30px auto;
    border-radius: 25px;

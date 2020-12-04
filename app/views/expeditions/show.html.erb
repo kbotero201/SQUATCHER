@@ -6,8 +6,18 @@
 </ul>
 
 <!--Pattern HTML-->
-<div id="pattern" class="pattern">
-  <div class="map">
-    <a href="https://www.google.com/maps/place/<%=@expedition.region%>/" class="btn map-link">View <%=@expedition.region%> Map</a>
-  </div>
+<div class='index-tile'>
+  <br>
+    <a href="https://www.google.com/maps/place/<%=@expedition.region%>/" ">View <%=@expedition.region%> Map</a>
+  <br>
+  <br>
+</div>
+
+<br>
+
+<div class='index-tile'>
+  <br>
+    <%= link_to "New Sighting", new_sighting_path %>
+  <br>
+  <br>
 </div>

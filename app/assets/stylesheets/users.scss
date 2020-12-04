@@ -167,13 +167,13 @@ svg {
   }
 
   &-marker-chicago {
-    left: 65%;
+    left: 52%;
     top: 35%;
   }
 
   &-marker-florida {
-    left: 85%;
-    top: 86%;
+    left: 70%;
+    top: 65%;
 
     &:after {
       animation-delay: 3s;
@@ -182,7 +182,7 @@ svg {
   }
 
   &-marker-los-angeles {
-    left: 7%;
+    left: 28%;
     top: 60%;
 
     &:after {
@@ -192,7 +192,7 @@ svg {
   }
 
   &-marker-new-york {
-    left: 91%;
+    left: 86%;
     top: 31%;
   }
 
@@ -207,8 +207,8 @@ svg {
   }
 
   &-marker-seattle {
-    left: 8%;
-    top: 1%;
+    left: 12%;
+    top: 20%;
 
     &:after {
       animation-delay: 5s;
