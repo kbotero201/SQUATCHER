@@ -195,6 +195,8 @@
  .index-tile {
    background-color: rgba(221, 161, 94, 1);
    text-align: center;
+   /* width: 50%; */
+   border-radius: 20px;
    /* padding: 2px;
    margin: 5px;
    border-radius: 30px;  */
