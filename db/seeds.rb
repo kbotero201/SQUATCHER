@@ -15,7 +15,10 @@ puts "Assets Destroyed"
 
 
 20.times {User.create(name: Faker::Books::Dune.unique.character, years_experience: rand(0..30), password: "a")}
-puts "20 Users created"
+User.create(name: "Aaron", years_experience: rand(0..30), password: "a")
+User.create(name: "Kevin", years_experience: rand(0..30), password: "a")
+User.create(name: "Rachael", years_experience: rand(0..30), password: "a")
+puts "23 Users created"
 
 Cryptid.create(name: "Ozark Howler", img_url: 'OzarkHowler.jpg', description: "A legendary creature that is purported to live in remote areas in Arkansas, Missouri, Oklahoma, and Texas. It is typically described as being bear sized, with a thick body, stocky legs, black shaggy hair, glowing red eyes, and prominent horns. Its cry is often described as being a combination of a wolf's howl, an elk's bugle, and the laugh of a hyena.")
 Cryptid.create(name: "Almas", img_url: 'Almas.jpg', description: "An ape-like cryptid reported from Central Asia. They are said to inhabit the Asian mountain regions of Pamir and Caucasus as well as the Mongolian mountain range Altai. Sightings of the Almas date back as early as the 15th century.")
@@ -46,7 +49,7 @@ regions = ["Pacific Northwest", "Southwest", "Midwest", "Northeast", "Southeast"
 puts "60 Expeditions Created"
 
 temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"]
-60.times {Sighting.create(
+60.times {Sighting.create!(
         date: Faker::Date.between(from: '2002-01-23', to: '2020-11-29'), 
         location: Faker::Mountain.name, 
         creature_temperament: temperament.sample, 
