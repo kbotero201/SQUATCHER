@@ -1,0 +1,24 @@
+<div class="form-container">
+<% if flash[:expedition_errors] %>
+  <ul>
+  <% flash[:expedition_errors].each do |error| %>
+  <li> <%= error %> </li>
+  <% end %>
+  </ul>
+<% end  %>
+
+
+<%= form_for @cryptid do |f| %>
+  <div class="form-input">
+    <%= f.label 'Name:' %><br>
+    <%= f.text_field(:name) %><br><br>
+  </div>
+
+  <div class="form-input">
+    <%= f.label 'Description' %><br>
+    <%= f.text_area(:description) %><br><br>
+  </div>
+  <br>
+  <%= f.submit class: "form-btn" %>
+<% end %>
+</div>

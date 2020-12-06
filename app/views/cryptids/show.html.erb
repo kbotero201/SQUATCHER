@@ -1,18 +1,16 @@
+<div class="three-divs"></div>
 
-<div class="parent">
-
-
-<div class='div1'>
+<div class="threediv-1">
     <h1> <%= @cryptid.name %> </h1>
     <br>
-    <%= @cryptid.description %>
+    <dif class="two-divs">
+            <%= @cryptid.description %>
+            <%= image_tag @cryptid.img_url, class: 'show-img' %>
+    </div>
 </div>
 
-
-
-
-<div class='div2'></div><h4>Recent Sightings</h4>
-
+<div class='threediv-2'>
+<h4>Recent Sightings</h4>
     <ul class='no-bullets'>
         <% @cryptid.sightings.each do |sighting| %>
         <li>Date: <%= sighting.date %></li>
@@ -22,17 +20,12 @@
             <li>Fear Instilled: <%= sighting.fear_rating %> out of 10</li>
         </ul>
     <% end %>
-</ul>
-
+    </ul>
 </div>
 
 
 <div class='div3'>
-<%= image_tag @cryptid.img_url %>
+<<%= link_to 'Edit', edit_cryptid_path(@cryptid) %>>
 </div>
+
 </div>
-
-
-
-
-

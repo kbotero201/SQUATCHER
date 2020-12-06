@@ -1,7 +1,9 @@
-
+<div class="three-divs">
+<div class="threedivs-1">
 <h1> Sightings: </h1>
 
 <% @sightings.each do |sighting| %> 
-<div> <%= sighting.location %> - <%= sighting.cryptid.name %> <div>
+<%= sighting.location %> - <%= sighting.cryptid.name %>
 <% end %>
 
+</div>

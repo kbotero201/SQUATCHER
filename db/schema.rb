@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_215310) do
+ActiveRecord::Schema.define(version: 2020_12_04_031804) do
 
   create_table "cryptids", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url"
     t.string "description"
   end
 
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_215310) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
+    t.text "name"
   end
 
   create_table "sightings", force: :cascade do |t|
