@@ -1,10 +1,9 @@
-<div class='index-container'>
-<div class="three-divs"></div>
+<div class="three-divs">
 <div class="threediv-1">
 <% @cryptids.each do |cryptid| %> 
     <div class='index-tile'>
     <h3><%= link_to cryptid.name, cryptid_path(cryptid) %></h3>
-    </div>  
+    </div> 
     <% end %> 
 </div>
 

@@ -1,3 +1,5 @@
+<div class="three-divs">
+<div class="threediv-1">
 <h1> <%= @expedition.region %> </h1> 
 <h4> <%= @expedition.season %> - <%= @expedition.days %> Days</h4>
 <ul><% @expedition.sightings.each do |sighting| %>
@@ -20,4 +22,6 @@
     <%= link_to "New Sighting", new_sighting_path %>
   <br>
   <br>
+</div>
+</div>
 </div>

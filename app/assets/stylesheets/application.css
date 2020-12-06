@@ -23,7 +23,7 @@
 --illuminating-emerald: #3a9687ff;
 /* ^ link color */
 --ming: #306b76ff;
-
+/* ^index tile */
 --indigo-dye: #264065ff;
 /* ^index container */
 --midnight-blue: #1c1554ff;
@@ -201,27 +201,25 @@ ul.no-bullets {
   }
   
 .index-container {
-   /* max-height: 100vh; */
+  /* max-height: 100vh; */
    max-width: 90%;
-   overflow: auto; 
    display: flexbox;
    flex-flow: row wrap;
    background-color: #264065;
    padding: 25px;
    margin: 30px auto;
    border-radius: 25px;
-   justify-content: space-evenly; 
+   justify-content: space-evenly;
  }
  
 .index-tile {
-   /* background-color: rgba(221, 161, 94, 1); */
+  background-color: #306b76ff;
   text-align: center;
-   /* width: 50%; */
-  border-radius: 20px;
-   /* padding: 2px;
-   margin: 5px;
-   border-radius: 30px;  */
- }
+  padding: 30px;
+  margin: 10px;
+  border-radius: 15px 50px;
+  width: fit-content;
+}
  
 .index-tile:hover {
    /* border: 3px solid rgb(62, 7, 79);  */
