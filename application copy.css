@@ -13,9 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import "pickadate/default";
-@import "pickadate/default.date";  
-@import "pickadate/default.time"; 
+
 
 $ocean-green: rgba(67, 193, 151, 1);
 $illuminating-emerald: rgba(58, 150, 135, 1);
@@ -23,30 +21,42 @@ $ming: rgba(48, 107, 118, 1);
 $indigo-dye: rgba(38, 64, 101, 1);
 $midnight-blue: rgba(28, 21, 84, 1);
 
+
+@import "pickadate/default";
+@import "pickadate/default.date";  
+@import "pickadate/default.time"; 
+
 /* * {border: 1px solid black;} */
 
-body {
+ body {
+    /* background-image: url("https://i.pinimg.com/originals/2c/37/53/2c37538ad1d9a09852c9ec8638c5fa8b.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+ 
+    /* background-color: rgb(255, 255, 255); */
     background-color: rgba(28, 21, 84, 1);
-    color: rgba(48, 107, 118, 1);
-}
+    color: rgba(67, 193, 151, 1);
 
-a {
-    color: rgba(58, 150, 135, 1);
-    text-decoration: none;
-}
 
-a:hover {
-    color: whitesmoke;
-    transition: 2.5s;
-}
+  }
 
-ul.no-bullets {
+  ul.no-bullets {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margins */
-}
+  }
 
+  
+
+ 
+ 
    /* ---------------------- CSS for Navbar and Banner -------------------- */
+ 
+ 
+   .banner-img {
+     width: 100%;
+     max-height: 200px;
+    }
    
     .banner {
       width: 90%;
@@ -65,16 +75,18 @@ ul.no-bullets {
      font-size: 5em;
      padding: 30px;
      letter-spacing: 25px;
-     color: #996600;
+     color: rgba(188, 108, 37, 1);
      text-shadow: 2px 2px 4px #000000;
-
+     
+     /* -webkit-text-stroke: 1px grey; */
+     /* line-height: 200px; */
    }
   
    
    
     .nav {
-     background-color: rgba(48, 107, 118, 1);
-     color: rgba(67, 193, 151, 1);
+     background-color: rgba(188, 108, 37, 1);
+     color: whitesmoke;
      font-weight: 800;
      
      height: 30px;
@@ -85,20 +97,23 @@ ul.no-bullets {
    }
    
     .nav li {
+      /* border: 1px solid black; */
       display: inline-block;
       line-height: 30px;
       padding: 0px 5px 0px 5px;
       margin: 0px;
+   
     }
    
-    .nav li a:hover {
-      color: whitesmoke;
-      transition: 2.5s;
+    .nav li:hover {
+      background-color: rgba(255,255,255,0.4);
+      transition: 1s;
+      border-radius: 50px;
     }
    
     .nav li a {
      text-decoration: none;
-     color: rgba(67, 193, 151, 1);
+     color: whitesmoke;
      font-weight: 800;
    }
    
@@ -112,7 +127,7 @@ ul.no-bullets {
  .container {
    margin: 25px auto;
    max-width: 87%;
-   /* background-color: rgba(40, 54, 24, 1); */
+   background-color: rgba(40, 54, 24, 1);
    padding: 10px;
    border-radius: 25px;
    height: 100%;
@@ -123,7 +138,7 @@ ul.no-bullets {
  .form-container {
    max-width: 300px;
    margin: 0px auto;
-   /* background-color: rgba(62, 7, 79, 0.2); */
+   background-color: rgba(62, 7, 79, 0.2);
    padding: 20px;
    border-radius: 25px;
    text-align: center;
@@ -141,26 +156,43 @@ ul.no-bullets {
  
  
    /*------------------------Index Page CSS ----------------------  */
-.parent {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
+ 
+   /* .parent {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 2 / 2 / 3; }
+    .div2 { grid-area: 2 / 2 / 3 / 3; }
+    .div3 { grid-area: 3 / 2 / 4 / 3; }
+    .div4 { grid-area: 4 / 2 / 5 / 3; }
+ */
+
+
+
+    .parent {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      }
       
-.div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 2 / 1 / 3 / 2; }
-.div3 { grid-area: 3 / 1 / 4 / 2; }
+      .div1 { grid-area: 1 / 1 / 2 / 2; }
+      .div2 { grid-area: 2 / 1 / 3 / 2; }
+      .div3 { grid-area: 3 / 1 / 4 / 2; }
   
   
-.index-container {
+   .index-container {
    /* max-height: 100vh; */
    max-width: 90%;
    overflow: auto; 
    display: flexbox;
    flex-flow: row wrap;
-   /* background-color: rgba(254, 250, 224, 1); */
+   background-color: rgba(254, 250, 224, 1);
    padding: 25px;
    margin: 30px auto;
    border-radius: 25px;
@@ -168,7 +200,7 @@ ul.no-bullets {
  }
  
  .index-tile {
-   /* background-color: rgba(221, 161, 94, 1); */
+   background-color: rgba(221, 161, 94, 1);
    text-align: center;
    /* width: 50%; */
    border-radius: 20px;
@@ -179,12 +211,12 @@ ul.no-bullets {
  
  .index-tile:hover {
    /* border: 3px solid rgb(62, 7, 79);  */
-   /* background-color: rgba(221, 161, 94, 1); */
+   background-color: rgba(221, 161, 94, 1);
  }
  
  .index-tile h3 a {
    text-decoration: none;
-   /* color: rgb(62, 7, 79); */
+   color: rgb(62, 7, 79);
    font-weight: 1200;
  }
  
@@ -201,14 +233,14 @@ ul.no-bullets {
  
  
  .show-container {
-   /* background-color: rgba(255,255,255,0.4); */
+   background-color: rgba(255,255,255,0.4);
    padding: 10px;
    border-radius: 25px;
    
  }
 
  .show-tile {
-  /* background-color: cornflowerblue; */
+  background-color: cornflowerblue;
   padding: 10px;
   border-radius: 10px
   
@@ -266,3 +298,68 @@ ul.no-bullets {
    }
  }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* CSS HEX */
+--dark-olive-green: #606c38ff;
+--kombu-green: #283618ff;
+--cornsilk: #fefae0ff;
+--fawn: #dda15eff;
+--liver-dogs: #bc6c25ff;
+
+/* CSS HSL */
+--dark-olive-green: hsla(74, 32%, 32%, 1);
+--kombu-green: hsla(88, 38%, 15%, 1);
+--cornsilk: hsla(52, 94%, 94%, 1);
+--fawn: hsla(32, 65%, 62%, 1);
+--liver-dogs: hsla(28, 67%, 44%, 1);
+
+/* SCSS HEX */
+$dark-olive-green: #606c38ff;
+$kombu-green: #283618ff;
+$cornsilk: #fefae0ff;
+$fawn: #dda15eff;
+$liver-dogs: #bc6c25ff;
+
+/* SCSS HSL */
+$dark-olive-green: hsla(74, 32%, 32%, 1);
+$kombu-green: hsla(88, 38%, 15%, 1);
+$cornsilk: hsla(52, 94%, 94%, 1);
+$fawn: hsla(32, 65%, 62%, 1);
+$liver-dogs: hsla(28, 67%, 44%, 1);
+
+/* SCSS RGB */
+$dark-olive-green: rgba(96, 108, 56, 1);
+$kombu-green: rgba(40, 54, 24, 1);
+$cornsilk: rgba(254, 250, 224, 1);
+$fawn: rgba(221, 161, 94, 1);
+$liver-dogs: rgba(188, 108, 37, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-right: linear-gradient(90deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom: linear-gradient(180deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-left: linear-gradient(270deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-top-right: linear-gradient(45deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom-right: linear-gradient(135deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-top-left: linear-gradient(225deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-bottom-left: linear-gradient(315deg, #606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);
+$gradient-radial: radial-gradient(#606c38ff, #283618ff, #fefae0ff, #dda15eff, #bc6c25ff);

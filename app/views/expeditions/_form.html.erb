@@ -1,17 +1,20 @@
-  <% if flash[:expedition_errors] %>
-<ul>
-<% flash[:expedition_errors].each do |error| %>
-<li> <%= error %> </li>
-<% end %>
-</ul>
+<% if flash[:expedition_errors] %>
+  <ul>
+  <% flash[:expedition_errors].each do |error| %>
+  <li> <%= error %> </li>
+  <% end %>
+  </ul>
 <% end  %>
-  
 
-  <% @seasons = ["Spring", "Summer", "Fall", "Winter"] %>
-
-  <% @regions = ["Pacific Northwest", "Southwest", "Midwest", "Northeast", "Southeast"]  %> 
+<% @seasons = ["Spring", "Summer", "Fall", "Winter"] %>
+<% @regions = ["Pacific Northwest", "Southwest", "Midwest", "Northeast", "Southeast"]  %> 
 
 <%= form_for @expedition do |f| %>
+  <div class="form-input">
+    <%= f.label 'Expedition Code Name:' %><br>
+    <%= f.number_field(:days, html_options = { placeholder: 'Ex: 14' }) %><br><br>
+  </div>
+
   <div class="form-input">
     <%= f.label 'Length of Expedition (days):' %><br>
     <%= f.number_field(:days, html_options = { placeholder: 'Ex: 14' }) %><br><br>
