@@ -1,3 +1,4 @@
+<div class="form-container">
 <% if flash[:expedition_errors] %>
   <ul>
   <% flash[:expedition_errors].each do |error| %>
@@ -12,7 +13,7 @@
 <%= form_for @expedition do |f| %>
   <div class="form-input">
     <%= f.label 'Expedition Code Name:' %><br>
-    <%= f.number_field(:days, html_options = { placeholder: 'Ex: 14' }) %><br><br>
+    <%= f.text_field(:name, html_options = { placeholder: "Ex: 'Red Baron'" }) %><br><br>
   </div>
 
   <div class="form-input">
@@ -25,10 +26,9 @@
   </div>
   <div class="form-input">
     <%= f.label 'Region' %><br>
-    <%= f.collection_select :region, @regions, :to_s, :to_s %><br><br>
+    <%= f.collection_select :region, @regions, :to_s, :to_s %>
   </div>
-
-
-<br>
-  <%= f.submit class: "form-btn"%>
+  <br>
+  <%= f.submit class: "form-btn" %>
 <% end %>
+</div>

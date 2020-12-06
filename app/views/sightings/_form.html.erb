@@ -1,3 +1,5 @@
+<div class="form-container">
+
 <% if flash[:sighting_errors] %>
 <ul>
 <% flash[:sighting_errors].each do |error| %>
@@ -8,49 +10,54 @@
 
 <%= form_for @sighting do |f| %>
 
- <%  @fear = [1,2,3,4,5,6,7,8,9,10] %>
+ <% @fear = [1,2,3,4,5,6,7,8,9,10] %>
  <% @temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"] %>
  
   <div class="form-input">
-    <%= f.label "Date" %><br>
-    <%= f.text_field(:date, html_options = {class: 'datepicker', placeholder: 'mm/dd/yyyy' }) %><br>
+    <%= f.label "Date" %>
+    <br>
+    <%= f.text_field(:date, html_options = {class: 'datepicker', placeholder: 'mm/dd/yyyy' }) %>
+    <br>
   </div>
   <div class="form-input">
-    <%= f.label 'Location' %><br>
-    <%= f.text_area :location %><br>
+    <%= f.label 'Location' %>
+    <br>
+    <%= f.text_area :location %>
+    <br>
   </div>
   <div class="form-input">
-    <%= f.label "Creature Temperament" %><br>
-    <%= f.collection_select :creature_temperament, @temperament, :to_s, :to_s %><br>
+    <%= f.label "Creature Temperament" %>
+    <br>
+    <%= f.collection_select :creature_temperament, @temperament, :to_s, :to_s %>
+    <br>
   </div>
   <div class="form-input">
-    <%= f.label 'Fear Rating'%><br>
-    <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %><br>
+    <%= f.label 'Fear Rating'%>
+    <br>
+    <%= f.collection_select :fear_rating, @fear, :to_i, :to_i %>
+    <br>
   </div>
   <div class="form-input">
-    <%= f.label "Description"%><br>
-    <%= f.text_area(:description, html_options = {placeholder: 'what was bigfoot doing?' }) %><br>
+    <%= f.label "Description"%>
+    <br>
+    <%= f.text_area(:description, html_options = {placeholder: 'what was bigfoot doing?' }) %>
+    <br>
   </div>
   <div class="form-input">
-    <%= f.label "Cryptid" %><br>
-    <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name%> <br>
+    <%= f.label "Cryptid" %>
+    <br>
+    <%= f.collection_select :cryptid_id, Cryptid.all, :id, :name %>
+    <br>
   </div>
 
  <%# repurpose so that expedition id from prev page auto populates  %>
   <div class="form-input">
-    <%= f.label'Expedition' %><br>
-    <%= f.collection_select :expedition_id, @current_user.expeditions.all, :id, :region %> <br>
+    <%= f.label'Expedition' %>
+    <br>
+    <%= f.collection_select :expedition_id, @current_user.expeditions.all, :id, :region %>
+    <br>
   </div>
-
-
-
-
-
-  <%# f.collection_select :expedition_id, current_user.expeditions.all, :id, :region %> <br>
-
-  </div>
- 
-
+  <br>
   <%= f.submit class: "form-btn" %>
 <% end %>
-
+</div>

@@ -1,8 +1,4 @@
-<div class="monster"></div>
-
-<br>
-<br>
-
+<div class="form-container">
 
 <% if flash[:user_errors] %>
 <ul>
@@ -12,19 +8,21 @@
 </ul>
 <% end  %>
 
-<h1> Sign Up: </h1>
-
+<h1>Sign Up:</h1>
 <%= form_for @user do |f| %>
-  <%= f.label  'Username'%><br>
-  <%= f.text_field :name %><br>
-
-  <%= f.label 'Years Experience' %><br>
-  <%= f.number_field :years_experience %><br>
-
-  <%= f.label 'Password'  %><br>
-  <%= f.text_field :password %><br><br>
-
-  <%= f.submit %>
-
-
+  <%= f.label 'Username' %>
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label 'Years Experience' %>
+  <br>
+  <%= f.number_field :years_experience %>
+  <br>
+  <%= f.label 'Password' %>
+  <br>
+  <%= f.text_field :password %>
+  <br>
+  <br>
+  <%= f.submit "Create User", class: "form-btn" %>
 <% end %>
+</div>

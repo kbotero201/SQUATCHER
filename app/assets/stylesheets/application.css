@@ -17,128 +17,166 @@
 @import "pickadate/default.date";  
 @import "pickadate/default.time"; 
 
-$ocean-green: rgba(67, 193, 151, 1);
-$illuminating-emerald: rgba(58, 150, 135, 1);
-$ming: rgba(48, 107, 118, 1);
-$indigo-dye: rgba(38, 64, 101, 1);
-$midnight-blue: rgba(28, 21, 84, 1);
+/* CSS HEX */
+--ocean-green: #43c197ff;
+/* ^font color */
+--illuminating-emerald: #3a9687ff;
+/* ^ link color */
+--ming: #306b76ff;
 
-/* * {border: 1px solid black;} */
+--indigo-dye: #264065ff;
+
+--midnight-blue: #1c1554ff;
+/* ^background color */
+
 
 body {
-    background-color: rgba(28, 21, 84, 1);
-    color: rgba(48, 107, 118, 1);
+  background-color: #1c1554ff;
+  color: #43c197ff;
 }
 
 a {
-    color: rgba(58, 150, 135, 1);
-    text-decoration: none;
+  color: #3a9687ff;
+  text-decoration: none;
 }
 
 a:hover {
-    color: whitesmoke;
-    transition: 2.5s;
+  color: whitesmoke;
+  transition: 2.5s;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color:rgba(67, 193, 151, 1);
 }
 
 ul.no-bullets {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
    /* ---------------------- CSS for Navbar and Banner -------------------- */
    
-    .banner {
-      width: 90%;
-      height: 200px;
-      line-height: 200px;
-      text-align: center;
-      background-image: url("Forest_trees_dark_low.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 0px auto;
-    }
+.banner {
+  width: 90%;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  background-image: url("Forest_trees_dark_low.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px auto;
+}
  
-    #banner-header {
-     margin: 0px;
-     font-family: fantasy;
-     font-size: 5em;
-     padding: 30px;
-     letter-spacing: 25px;
-     color: #996600;
-     text-shadow: 2px 2px 4px #000000;
-
-   }
+#banner-header {
+  margin: 0px;
+  font-family: fantasy;
+  font-size: 5em;
+  padding: 30px;
+  letter-spacing: 25px;
+  color: #996600;
+  text-shadow: 2px 2px 4px #000000;
+}
   
+.nav {
+  background-color: rgba(48, 107, 118, 1);
+  color: #3a9687ff;
+  font-weight: 800;
+  height: 30px;
+  width: 90%;
+  margin: 0px auto;
+  padding: 0px;
+  border-radius: 0px 0px 10px 10px;
+}
    
+.nav li {
+  display: inline-block;
+  line-height: 30px;
+  padding: 0px 5px 0px 5px;
+  margin: 0px;
+}
    
-    .nav {
-     background-color: rgba(48, 107, 118, 1);
-     color: rgba(67, 193, 151, 1);
-     font-weight: 800;
-     
-     height: 30px;
-     width: 90%;
-     margin: 0px auto;
-     padding: 0px;
-     border-radius: 0px 0px 10px 10px;
-   }
+.nav li a:hover {
+  color: whitesmoke;
+  transition: 2.5s;
+}
    
-    .nav li {
-      display: inline-block;
-      line-height: 30px;
-      padding: 0px 5px 0px 5px;
-      margin: 0px;
-    }
+.nav li a {
+  text-decoration: none;
+  color: #3a9687ff;
+  font-weight: 800;
+}
    
-    .nav li a:hover {
-      color: whitesmoke;
-      transition: 2.5s;
-    }
-   
-    .nav li a {
-     text-decoration: none;
-     color: rgba(67, 193, 151, 1);
-     font-weight: 800;
-   }
-   
-   
-   .right {
-     float: right;
-   }
+.right {
+  float: right;
+}
  
-   /* --------------CSS for background on every page --------------------- */
+  /* --------------CSS for background on every page --------------------- */
  
- .container {
-   margin: 25px auto;
-   max-width: 87%;
+.container {
+  margin: 25px auto;
+  max-width: 87%;
    /* background-color: rgba(40, 54, 24, 1); */
-   padding: 10px;
-   border-radius: 25px;
-   height: 100%;
- }
+  padding: 10px;
+  border-radius: 25px;
+  height: 100%;
+}
  
  /* ------------- CSS for Forms ------------ */
  
- .form-container {
-   max-width: 300px;
-   margin: 0px auto;
+.form-container {
+  max-width: 60%;
+  margin: 0px auto;
    /* background-color: rgba(62, 7, 79, 0.2); */
-   padding: 20px;
-   border-radius: 25px;
-   text-align: center;
- }
+  padding: 20px;
+  border-radius: 25px;
+  text-align: left;
+}
  
- .form-btn {
-   background-color: purple;
-   margin-top: 10px;
-   border-radius: 25px;
- }
+/* .form-btn {
+  background-color: #3a9687ff;
+  margin-top: 10px;
+  border-radius: 25px;
+} */
  
- .form-input {
-   margin-top: 10px;
- }
- 
+.form-input {
+  margin-top: 10px;
+}
+
+.form-btn {
+  display:inline-block;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#264065ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+}
+.form-btn:active {
+  top:0.1em;
+}
+/* @media all and (max-width:30em){
+  .form-btn {
+   display:block;
+   margin:0.4em auto;
+  }
+} */
+
+
  
    /*------------------------Index Page CSS ----------------------  */
 .parent {
@@ -167,102 +205,101 @@ ul.no-bullets {
    justify-content: space-evenly; 
  }
  
- .index-tile {
+.index-tile {
    /* background-color: rgba(221, 161, 94, 1); */
-   text-align: center;
+  text-align: center;
    /* width: 50%; */
-   border-radius: 20px;
+  border-radius: 20px;
    /* padding: 2px;
    margin: 5px;
    border-radius: 30px;  */
  }
  
- .index-tile:hover {
+.index-tile:hover {
    /* border: 3px solid rgb(62, 7, 79);  */
    /* background-color: rgba(221, 161, 94, 1); */
- }
+}
  
- .index-tile h3 a {
-   text-decoration: none;
+.index-tile h3 a {
+  text-decoration: none;
    /* color: rgb(62, 7, 79); */
-   font-weight: 1200;
- }
+  font-weight: 1200;
+}
  
- .index-img {
-   max-width: 150px;
- }
- .show-img {
-   max-width: 250px;
- }
- 
- .index-tile a {
-   text-decoration: none;
- }
- 
- 
- .show-container {
-   /* background-color: rgba(255,255,255,0.4); */
-   padding: 10px;
-   border-radius: 25px;
-   
- }
+.index-img {
+  max-width: 150px;
+}
 
- .show-tile {
+.show-img {
+  max-width: 250px;
+}
+ 
+.index-tile a {
+  text-decoration: none;
+}
+ 
+.show-container {
+   /* background-color: rgba(255,255,255,0.4); */
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.show-tile {
   /* background-color: cornflowerblue; */
   padding: 10px;
   border-radius: 10px
-  
+}
 
- }
-
- @import "compass/css3";
-
- .btn {
-   display: inline-block;
-   padding: 0.5em 1em;
-   background: #808080;
-   color: #fff;
-   margin: 1em;
-   &:hover,
-   &:focus {
-     color: #fff;
-     background: #333;
-   }
- }
  
- .static-img {
-   display: block;
- }
+
+@import "compass/css3";
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #808080;
+  color: #fff;
+  margin: 1em;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: #333;
+  }
+}
  
- iframe {
-   max-width: 100%;
- }
+.static-img {
+  display: block;
+}
+ 
+iframe {
+  max-width: 100%;
+}
  /* From https://codepen.io/chriscoyier/full/kycDp */
- .map-container {
-   width: 100%;
-   margin: 0 auto;
-   height: 0;
-   padding-top: 38%;
-   position: relative;
-   display: none; /* Hide for small screens */
-   iframe {
-     width: 100%;
-     height: 100%; /* had to specify height/width */
-     position: absolute;
-     top: 0;
-     right: 0;
-     left: 0;
-     bottom: 0;
-   }
- }
+.map-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 0;
+  padding-top: 38%;
+  position: relative;
+  display: none; /* Hide for small screens */
+  iframe {
+    width: 100%;
+    height: 100%; /* had to specify height/width */
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
  
  /* Medium Screens */
  @media all and (min-width: 34.375em) {
-   .map-container {
-     display: block;
-   }
-   .static-img {
-     display: none;
-   }
- }
+  .map-container {
+    display: block;
+  }
+  .static-img {
+    display: none;
+  }
+}
  
