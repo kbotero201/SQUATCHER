@@ -56,6 +56,17 @@ h1 {
   color:rgba(67, 193, 151, 1);
 }
 
+h2 {
+  display: block;
+  font-size: 1em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color:rgba(67, 193, 151, 1);
+}
+
 ul.no-bullets {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
@@ -65,7 +76,7 @@ ul.no-bullets {
    /* ---------------------- CSS for Navbar and Banner -------------------- */
    
 .banner {
-  width: 90%;
+  width: 1200px;
   height: 200px;
   line-height: 200px;
   text-align: center;
@@ -89,16 +100,16 @@ ul.no-bullets {
   background-color: rgba(48, 107, 118, 1);
   color: #3a9687ff;
   font-weight: 800;
-  height: 30px;
-  width: 90%;
+  height: 40px;
+  width: 1200px;
   margin: 0px auto;
-  padding: 0px;
+  padding: 0px 20px;
   border-radius: 0px 0px 10px 10px;
 }
    
 .nav li {
   display: inline-block;
-  line-height: 30px;
+  line-height: 40px;
   padding: 0px 5px 0px 5px;
   margin: 0px;
 }
@@ -138,13 +149,8 @@ ul.no-bullets {
   padding: 20px;
   border-radius: 25px;
   text-align: left;
+  text-transform:uppercase;
 }
- 
-/* .form-btn {
-  background-color: #3a9687ff;
-  margin-top: 10px;
-  border-radius: 25px;
-} */
  
 .form-input {
   margin-top: 10px;
@@ -169,15 +175,7 @@ ul.no-bullets {
 .form-btn:active {
   top:0.1em;
 }
-/* @media all and (max-width:30em){
-  .form-btn {
-   display:block;
-   margin:0.4em auto;
-  }
-} */
 
-
- 
    /*------------------------Index Page CSS ----------------------  */
 .three-divs {
   display: grid;
@@ -187,8 +185,14 @@ ul.no-bullets {
   grid-row-gap: 0px;
 }
       
-.threedivs-1 { grid-area: 1 / 1 / 2 / 2; }
-.threedivs-2 { grid-area: 2 / 1 / 3 / 2; }
+.threedivs-1 { 
+  grid-area: 1 / 1 / 2 / 2;
+  height: auto; 
+}
+.threedivs-2 { 
+  grid-area: 2 / 1 / 3 / 2; 
+  height: auto; 
+}
 .threedivs-3 { grid-area: 3 / 1 / 4 / 2; }
   
 .two-divs {
@@ -198,65 +202,61 @@ ul.no-bullets {
   grid-column-gap: 30px;
   grid-row-gap: 0px;
   padding: 10px;
+  align-content: center;
   }
   
-.index-container {
-  /* max-height: 100vh; */
-   max-width: 90%;
-   display: flexbox;
-   flex-flow: row wrap;
-   background-color: #264065;
-   padding: 25px;
-   margin: 30px auto;
-   border-radius: 25px;
-   justify-content: space-evenly;
- }
+ .index-container {
+  background-color: #264065;
+  display: flexbox;
+  flex-flow: row wrap;
+  padding: 25px;
+  margin: 30px auto;
+  width: 1200px;
+  margin: 30px auto;
+  border-radius: 25px;
+  align-content: space-around;
+}
  
-.index-tile {
-  background-color: #306b76ff;
+.cryptid-index-tile {
+  background-color: #306b76;
   text-align: center;
   padding: 30px;
-  margin: 10px;
+  margin: 50px 10px;
   border-radius: 15px 50px;
-  width: fit-content;
+  width: calc((1000px / 3));
+  height: 100px;
+  display: inline-block;
 }
  
-.index-tile:hover {
-   /* border: 3px solid rgb(62, 7, 79);  */
-   /* background-color: rgba(221, 161, 94, 1); */
+.cryptid-index-tile:hover {
+  background-color: darkgrey;
+  color: whitesmoke;
+  transition: 2s;
 }
  
-.index-tile h3 a {
-  text-decoration: none;
-   /* color: rgb(62, 7, 79); */
-  font-weight: 1200;
-}
- 
-.index-img {
-  max-width: 150px;
+.user-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
 }
 
-.show-img {
-  max-width: 500px;
-}
- 
-.index-tile a {
-  text-decoration: none;
-}
- 
-.show-container {
-   /* background-color: rgba(255,255,255,0.4); */
-  padding: 10px;
-  border-radius: 25px;
+.user-tile {
+  background-color: #306b76;
+  text-align: left;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+
 }
 
-.show-tile {
-  /* background-color: cornflowerblue; */
-  padding: 10px;
-  border-radius: 10px
+.user-tile:hover {
+  background-color: darkgrey;
+  color: whitesmoke;
+  transition: 2s;
 }
 
- 
+
 
 @import "compass/css3";
 

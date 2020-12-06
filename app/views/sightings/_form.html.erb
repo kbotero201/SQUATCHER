@@ -16,13 +16,13 @@
   <div class="form-input">
     <%= f.label "Date" %>
     <br>
-    <%= f.text_field(:date, html_options = {class: 'datepicker', placeholder: 'mm/dd/yyyy' }) %>
+    <%= f.text_field(:date, html_options = {class: 'datepicker', placeholder: 'yyyy/mm/dd' }) %>
     <br>
   </div>
   <div class="form-input">
     <%= f.label 'Location' %>
     <br>
-    <%= f.text_area :location %>
+    <%= f.text_area(:location, html_options = {placeholder: 'i.e. Ramapo State Forest' }) %>
     <br>
   </div>
   <div class="form-input">
@@ -40,7 +40,7 @@
   <div class="form-input">
     <%= f.label "Description"%>
     <br>
-    <%= f.text_area(:description, html_options = {placeholder: 'what was bigfoot doing?' }) %>
+    <%= f.text_area(:description, html_options = {placeholder: 'What was Sasquatch doing?' }) %>
     <br>
   </div>
   <div class="form-input">
