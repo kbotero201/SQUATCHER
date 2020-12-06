@@ -1,17 +1,12 @@
+<div class="form-container">
 
-<div class="monster"></div>
+<h1>Login:</h1>
 
-<br>
-<br>
-
-<h1 class=h1> Login: </h1>
-
-<ul>
+  <ul>
     <% flash.each do |message| %>
       <li><%= message %></li>
     <% end %>
-    </ul>
-  </div>
+  </ul>
 
 <%= form_for :session, url: login_path do |f| %>
 <%= f.label "Username" %>
@@ -24,3 +19,4 @@
 
 
 <% end  %>
+</div>
