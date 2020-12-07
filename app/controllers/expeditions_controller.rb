@@ -19,7 +19,7 @@ class ExpeditionsController < ApplicationController
     
     
     def create 
-        @current_user.expeditions << Expedition.create(expedition_params)
+        @current_user.expeditions << Expedition.create!(expedition_params)
     
     
         redirect_to expedition_path(Expedition.last)

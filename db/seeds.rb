@@ -14,7 +14,7 @@ Sighting.destroy_all
 puts "Assets Destroyed"
 
 
-20.times {User.create(name: Faker::Books::Dune.unique.character, years_experience: rand(0..30), password: "a")}
+20.times {User.create(name: Faker::Name.unique.name, years_experience: rand(0..30), password: "a")}
 User.create(name: "Aaron", years_experience: rand(0..30), password: "a")
 User.create(name: "Kevin", years_experience: rand(0..30), password: "a")
 User.create(name: "Rachael", years_experience: rand(0..30), password: "a")
@@ -48,10 +48,13 @@ regions = ["Pacific Northwest", "Southwest", "Midwest", "Northeast", "Southeast"
 60.times {Expedition.create(days: rand(1..15), season: seasons.sample, region: regions.sample, user_id: User.all.sample.id, name: Faker::Kpop.unique.boy_bands)}
 puts "60 Expeditions Created"
 
+national_parks =["Acadia National Park", "Arches National Park", "Badlands National Park", "Big Bend National Park", "Biscayne National Park", "Bryce Canyon National Park", "Death Valley National Park", "Denali National Park", "Dry Tortugas National Park", "Everglades National Park", "Glacier National Park", "Glacier Bay National Park", "Grand Canyon National Park", "Grand Teton National Park", "Great Basin National Park", "Great Sand Dunes National Park", "Great Smoky Mountains National Park", "Joshua Tree National Park", "Katmai National Park", "Kenai Fjords National Park", "Kings Canyon National Park", "Kobuk Valley National Park", "Mammoth Cave National Park", "Mesa Verde National Park", "Mount Rainier National Park", "Olympic National Park", "Petrified Forest National Park", "Redwood National Park", "Rocky Mountain National Park", "Shenandoah National Park", "Yellowstone National Park", "Yosemite National Park", "Zion National Park"]
+
+
 temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curious"]
 60.times {Sighting.create!(
         date: Faker::Date.between(from: '2002-01-23', to: '2020-11-29'), 
-        location: Faker::Mountain.name, 
+        location: national_parks.sample, 
         creature_temperament: temperament.sample, 
         fear_rating: rand(1..10), 
         description: Faker::Lorem.paragraph, 
@@ -62,7 +65,7 @@ temperament = ["Confident", "Shy", "Independent", "Happy", "Aggressive", "Curiou
 
 40.times {Sighting.create(
         date: Faker::Date.between(from: '2002-01-23', to: '2020-11-29'), 
-        location: Faker::Mountain.name, 
+        location: national_parks.sample, 
         creature_temperament: temperament.sample, 
         fear_rating: rand(1..10), 
         description: Faker::Lorem.paragraph, 
