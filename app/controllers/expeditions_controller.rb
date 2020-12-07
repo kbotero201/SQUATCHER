@@ -45,7 +45,7 @@ class ExpeditionsController < ApplicationController
     def destroy
         find_expedition
         @expedition.destroy
-        redirect_to expeditions_path
+        redirect_to user_path(@current_user)
     end
 
     private
