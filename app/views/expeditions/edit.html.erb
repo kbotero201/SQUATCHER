@@ -3,8 +3,8 @@
 <h1> Edit Expedition: </h1>
 
 <%= render 'form' %>
-
-<hr>
-<%= button_to "Delete Expedition", expedition_path(@expedition), method: :delete %>
+<div class="form-container">
+<%= button_to "Delete Expedition", expedition_path(@expedition), method: :delete, class: 'form-btn' %>
+</div>
 </div>
 </div>

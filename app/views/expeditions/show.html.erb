@@ -9,6 +9,9 @@
   <p>Region: <%= @expedition.region %> </p>
   <p>Season: <%= @expedition.season %> </p>
   </h2>
+  <br>
+  <p><%= link_to 'Edit Expedition', edit_expedition_path(@expedition) %>
+  
   </div>
   <div class='column'>
   <p> (put region map here)</p>
@@ -21,20 +24,26 @@
 
 <div class='user-container'>
   <h2 class='h2'>Sightings:</h2>
-  <div class='user-tile'>
-  <ul class='no-bullets'> 
+  
     <% @expedition.sightings.each do |sighting| %>
-    <%= link_to sighting_path(sighting) do %>
-      <div class='clickable'>
+    
+      
+      <%= link_to sighting_path(sighting) do %>
+      <div class='expedition-tile'>
+      <ul class='no-bullets'> 
+      
+      <div class='clickable-expedition'>
         <ul class='no-bullets'><%= sighting.date %>: 
         <li>Location: <%= sighting.location %></li>
         <li>Cryptid: <%= sighting.cryptid.name %> </li>
         </ul>
       </div>
+    </ul>
+  </div>
+    
     <% end %>
   <% end %>
-  </ul>
-  </div>
+  
 </div>
 
 

@@ -231,6 +231,26 @@ ul.no-bullets {
   margin-bottom: 10px;
 
 }
+
+.clickable-expedition {
+  border-radius: 10px;
+  padding: 4px;
+  color: whitesmoke;
+  background-color: #3a9687;
+  margin-bottom: 10px;
+  display: inline-flexbox;
+}
+
+.clickable-expedition:hover {
+  background-color: darkgrey;
+  color: whitesmoke;
+  transition: 2s;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 10px;
+
+}
+
   
  .index-container {
   background-color: #264065;
@@ -272,6 +292,18 @@ ul.no-bullets {
 .user-tile {
   background-color: #306b76;
   color: whitesmoke;
+  text-align: left;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  justify-content: space-around;
+  display: inline-block;
+
+}
+
+.expedition-tile {
+  background-color: transparent;
+  color: transparent;
   text-align: left;
   margin: 30px;
   padding: 20px;

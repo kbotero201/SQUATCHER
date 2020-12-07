@@ -76,7 +76,7 @@ class ExpeditionsController < ApplicationController
     # end
 
     def expedition_params
-        params.require(:expedition).permit(:days, :season, :region)
+        params.require(:expedition).permit(:name, :days, :season, :region)
     end
 
 
