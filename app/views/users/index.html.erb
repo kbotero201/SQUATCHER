@@ -1,29 +1,7 @@
 <div class="three-divs"></div>
 
 <div class='threediv-1'>
-<div class='user-container'>
-  <h1 class='h1'>Users:</h1>
-  
-    <% @users.each do |user| %>
-    
-      
-      <%= link_to user_path(user) do %>
-      <div class='expedition-tile'>
-      <ul class='no-bullets'> 
-      
-      <div class='clickable-expedition'>
-        <ul class='no-bullets'>
-        <li><h2 class='h2' style="text-align: center"><%= user.name %></h2></li>
-        <li style="text-align: center">Years Experience: <%= user.years_experience %></li>
-        <li style="text-align: center">Sightings Logged: <%= user.sightings.count %></li>
-        </ul>
-      </div>
-    </ul>
-  </div>
-    
-    <% end %>
-  <% end %>
-  
+<%= render 'map' %>
 </div>
 
 <div class='threedivs-2'>
