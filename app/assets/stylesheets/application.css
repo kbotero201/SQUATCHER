@@ -204,6 +204,22 @@ ul.no-bullets {
   padding: 10px;
   align-content: center;
   }
+
+.clickable {
+  border-radius: 10px;
+  padding: 4px;
+  color: whitesmoke;
+  background-color: #3a9687;
+}
+
+.clickable:hover {
+  background-color: darkgrey;
+  color: whitesmoke;
+  transition: 2s;
+  border-radius: 10px;
+  padding: 4px;
+
+}
   
  .index-container {
   background-color: #264065;
@@ -242,19 +258,17 @@ ul.no-bullets {
 
 .user-tile {
   background-color: #306b76;
+  color: whitesmoke;
   text-align: left;
   margin: 30px;
   padding: 20px;
   border-radius: 15px;
-  max-width: 350px;
+  
+  
 
 }
 
-.user-tile:hover {
-  background-color: darkgrey;
-  color: whitesmoke;
-  transition: 2s;
-}
+
 
 
 

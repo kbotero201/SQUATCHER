@@ -9,14 +9,22 @@
         <ul class='no-bullets'>
             <% @user.expeditions.each do |expedition| %>
                 <div class='user-tile'>
-                    <p><%= link_to expedition.name, expedition_path(expedition) %> :</p> <%= expedition.days %> Days
+                    <p>Expedition: <%= link_to expedition.name, expedition_path(expedition) %></p>
+                    <p>Length of Trip: <%= expedition.days %> Days</p>
+                    <hr>
                     <ul class='no-bullets'> 
                         <% expedition.sightings.each do |sighting| %>
-                        <li><%= sighting.location %>: <%= link_to sighting.cryptid.name, sighting_path(sighting) %> </li>
+                            <%= link_to sighting_path(sighting) do %>
+                            <div class='clickable'>
+                            <ul class='no-bullets'><%= sighting.date %>: 
+                            <li>Location: <%= sighting.location %></ul>
+                            <li>Cryptid: <%= sighting.cryptid.name %> </li>
+                            </ul>
+                            </div>
+                            <% end %>
                         <% end %>
                     </ul>
                 </div>
             <% end %> 
-       
         </ul>
 </div>    
