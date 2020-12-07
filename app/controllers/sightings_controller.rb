@@ -13,7 +13,9 @@ class SightingsController < ApplicationController
     end
 
     def create
-        sighting = Sighting.create(sighting_params)
+        hash = sighting_params
+        hash[:user_id] = @current_user.id
+        sighting = Sighting.create(hash)
         if sighting.valid?
             redirect_to sighting_path(sighting)
         else
