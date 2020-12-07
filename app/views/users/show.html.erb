@@ -4,8 +4,10 @@
     <p>Years as a cryptozoologist: <%= @user.years_experience  %></p>
     <p>Sightings Logged: <%= @user.sightings.count %></p>
 </div>
+
+<h2 class='h2'>My Expeditions:</h2>
 <div class='user-container'>
-    <h2 class='h2'>My Expeditions:</h2>
+    
         <ul class='no-bullets'>
             <% @user.expeditions.each do |expedition| %>
                 <div class='user-tile'>

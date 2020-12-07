@@ -20,12 +20,12 @@
 
 </div>
 
-
+<h2 class='h2'>Sightings:</h2>
 <div class='user-container'>
-  <h2 class='h2'>Sightings:</h2>
+  
   
     <% @expedition.sightings.each do |sighting| %>
-    
+      
       
       <%= link_to sighting_path(sighting) do %>
       <div class='expedition-tile'>
