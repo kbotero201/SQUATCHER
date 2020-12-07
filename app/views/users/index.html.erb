@@ -5,15 +5,22 @@
 </div>
 
 <div class='threedivs-2'>
-
-<h1> Users: </h1>
-
-  <% @users.each do |user| %>
-    <div> <%= link_to user.name, user_path(user)  %> | Years Experience: <%= user.years_experience  %> </div>
-  <% end  %>
-
+<div class='user-container'>
+    <h2 class='h2'>Recent Explorers:</h2>
+        <ul class='no-bullets'>
+            <% User.all.each do |user| %>
+                <div class='user-tile'>
+                    <h2 class='h2'><%= link_to user.name, user_path(user)  %></h2>
+                    <hr>
+                    <p>Years Experience: <%= user.years_experience %></p>
+                    <p>Expeditions: <%= user.expeditions.count %></p>
+                    <p>Cryptid Sightings: <%= user.sightings.count %></p>
+                            </div>     
+                        <% end %>
+                    </ul>
+                </div>
+           
+        </ul>
+</div>    
 </div>
-
-</div>
-
 
