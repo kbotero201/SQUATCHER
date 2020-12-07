@@ -203,6 +203,7 @@ ul.no-bullets {
   grid-row-gap: 0px;
   padding: 10px;
   align-content: center;
+  max-width: 1200px;
   }
 
 .div-column {

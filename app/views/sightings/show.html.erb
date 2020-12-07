@@ -1,17 +1,21 @@
-<div class="three-divs"></div>
-<div class="threediv-1">
-<h1> <%= @sighting.location  %> </h1>
-<p> <%= @sighting.date %> </p>
 
-<h2> <%= @sighting.expedition.region %> </h2>
-<br>
-<br>
 
-<p> <%= @sighting.cryptid.name %> </p>
-<br>
-<p> <%= @sighting.fear_rating  %></p>
-<br>
-<p> <%= @sighting.description  %></p>
-
+<div style="height: 350px;">
+  <h1 class='h1'>Sighting: <%= @sighting.cryptid.name %></h1>
+  <br>
+    <div class='two-divs'>
+        <div class='column'>
+            <p><b>Expedition Name:</b> <%= link_to @sighting.expedition.name, expedition_path(@sighting.expedition) %></p>
+            <p><b>Date:</b> <%= @sighting.date %> </p>
+            <p><b>Location:</b> <%= @sighting.location %> </p>
+            <p><b>Fear Rating (out of 10):</b> <%= @sighting.fear_rating %></p>
+            <p><b>Description of Events:</b> <%= @sighting.description  %></p>
+            <p><%= link_to 'Edit sighting', edit_sighting_path(@sighting) %>
+        </div>
+        <div class='column'>
+            <p> (put region map here)</p>
+            <p><a href="https://www.google.com/maps/place/<%= @sighting.expedition.region %>/" ">View <%= @sighting.expedition.region %> Map</a></p>
+        </div>
+    </div>
 </div>
-</div>
+
