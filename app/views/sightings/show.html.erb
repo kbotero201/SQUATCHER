@@ -15,7 +15,7 @@
         </div>
         <div class='column'>
             <p> (put region map here)</p>
-            <p><a href="https://www.google.com/maps/place/<%= @sighting.location %>/" ">View <%= @sighting.location %> Map</a></p>
+            <p><a href="https://www.google.com/maps/search/<%= @sighting.location.gsub(" ", "+") %>/" ">View <%= @sighting.location %> Map</a></p>
         </div>
     </div>
 
