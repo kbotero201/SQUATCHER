@@ -343,7 +343,12 @@ ul.no-bullets {
 .static-img {
   display: block;
 }
- 
+
+.map {
+  max-width: 900px;
+  max-height: 500px;
+}
+
 iframe {
   max-width: 100%;
 }

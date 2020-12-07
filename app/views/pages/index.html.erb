@@ -1,1 +1,21 @@
-hey
+<div class="threedivs-1">
+<div class="two-divs">
+<div>Welcome <%= @current_user.name %>, to where Sasquatches roam. Start your journey on Squatcher!</div>
+<div><div class="map"><%= render 'map' %></div></div>
+</div>
+
+
+<div class='user-container'>
+    <h2 class='h2'>Recent Sightings:</h2>
+        <ul class='no-bullets'>
+            <% Sighting.all.each do |sighting| %>
+                <div class='user-tile'>
+                    <h2 class='h2'><%= link_to sighting.date, sighting_path(sighting)  %></h2>
+                    <hr>
+                    <p>Location: <%= sighting.location %></p>
+                    <p>Fear Instilled: <%= sighting.fear_rating %></p>
+                    
+                </div>     
+            <% end %>
+        </ul>
+</div>
