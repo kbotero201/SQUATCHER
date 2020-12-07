@@ -24,6 +24,7 @@
         <ul class='no-bullets'>
         <li></li><%= sighting.date %>: </li>
         <li>Location: <%= sighting.location %></li>
+        <li>Spotted by: <%= sighting.user.name %></li>
         <li>Temperament: <%= sighting.creature_temperament %></li>
         <li>Fear Struck (of 10): <%= sighting.fear_rating %> </li>
         </ul>
