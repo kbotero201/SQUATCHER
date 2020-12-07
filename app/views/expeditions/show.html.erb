@@ -4,11 +4,10 @@
 
 <div class='two-divs'>
   <div class='column'>
-  <h2 class='h2'>
-  <p>Length: <%= @expedition.days %> Days</p>
-  <p>Region: <%= @expedition.region %> </p>
-  <p>Season: <%= @expedition.season %> </p>
-  </h2>
+  <p><b>Completed by:</b> <%= link_to @expedition.user.name, user_path(@expedition.user) %></p>
+  <p><b>Length:</b> <%= @expedition.days %> Days</p>
+  <p><b>Region:</b> <%= @expedition.region %> </p>
+  <p><b>Season:</b> <%= @expedition.season %> </p>
   <br>
   <p><%= link_to 'Edit Expedition', edit_expedition_path(@expedition) %>
   

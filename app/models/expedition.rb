@@ -1,6 +1,7 @@
 class Expedition < ApplicationRecord
     has_many :sightings
     has_many :cryptids, through: :sightings
+    belongs_to :user
 
     validates :days, presence: true, numericality: true
 

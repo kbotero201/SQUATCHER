@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
   
     def logout
       session.delete(:user_id)
-      redirect_to new_user_path
+      redirect_to new_login_path
     end 
   
     def new 
