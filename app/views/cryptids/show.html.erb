@@ -4,8 +4,8 @@
     <h1> <%= @cryptid.name %> </h1>
     <br>
     <div class="two-divs">
-            <%= @cryptid.description %>
-            <%= image_tag @cryptid.img_url, class: 'show-img' %>
+            <div class='div-column' style='width: 550px'><%= @cryptid.description %></div>
+            <div class='div-column'><%= image_tag @cryptid.img_url, class: 'show-img' %></div>
     </div>
 </div>
 
