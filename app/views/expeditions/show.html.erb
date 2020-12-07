@@ -1,27 +1,42 @@
-<div class="three-divs">
-<div class="threediv-1">
-<h1> <%= @expedition.region %> </h1> 
-<h4> <%= @expedition.season %> - <%= @expedition.days %> Days</h4>
-<ul><% @expedition.sightings.each do |sighting| %>
-<li><%= link_to sighting.cryptid.name, cryptid_path(sighting.cryptid.id) %></li> 
-<% end %>
-</ul>
+<div style="height: 350px;">
+  <h1 class='h1'>Expedition: <%= @expedition.name %></h1>
+  <br>
 
-<!--Pattern HTML-->
-<div class='index-tile'>
-  <br>
-    <a href="https://www.google.com/maps/place/<%=@expedition.region%>/" ">View <%=@expedition.region%> Map</a>
-  <br>
-  <br>
+<div class='two-divs'>
+  <div class='column'>
+  <h2 class='h2'>
+  <p>Length: <%= @expedition.days %> Days</p>
+  <p>Region: <%= @expedition.region %> </p>
+  <p>Season: <%= @expedition.season %> </p>
+  </h2>
+  </div>
+  <div class='column'>
+  <p> (put region map here)</p>
+  <p><a href="https://www.google.com/maps/place/<%= @expedition.region %>/" ">View <%= @expedition.region %> Map</a></p>
+  </div>
 </div>
 
-<br>
+</div>
 
-<div class='index-tile'>
-  <br>
-    <%= link_to "New Sighting", new_sighting_path %>
-  <br>
-  <br>
+
+<div class='user-container'>
+  <h2 class='h2'>Sightings:</h2>
+  <div class='user-tile'>
+  <ul class='no-bullets'> 
+    <% @expedition.sightings.each do |sighting| %>
+    <%= link_to sighting_path(sighting) do %>
+      <div class='clickable'>
+        <ul class='no-bullets'><%= sighting.date %>: 
+        <li>Location: <%= sighting.location %></li>
+        <li>Cryptid: <%= sighting.cryptid.name %> </li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+  </ul>
+  </div>
 </div>
-</div>
+
+
+
 </div>
