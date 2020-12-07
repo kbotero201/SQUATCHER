@@ -10,22 +10,36 @@
 </div>
 
 <div class='threediv-2'>
-<h4>Recent Sightings</h4>
-    <ul class='no-bullets'>
-        <% @cryptid.sightings.each do |sighting| %>
-        <li>Date: <%= sighting.date %></li>
-        <ul>
-            <li>Location: <%= sighting.location%></li>
-            <li>Temperament: <%= sighting.creature_temperament %></li>
-            <li>Fear Instilled: <%= sighting.fear_rating %> out of 10</li>
+<div class='user-container'>
+  <h2 class='h2'>Sightings:</h2>
+  
+    <% @cryptid.sightings.each do |sighting| %>
+    
+      
+      <%= link_to sighting_path(sighting) do %>
+      <div class='expedition-tile'>
+      <ul class='no-bullets'> 
+      
+      <div class='clickable-expedition'>
+        <ul class='no-bullets'>
+        <li></li><%= sighting.date %>: </li>
+        <li>Location: <%= sighting.location %></li>
+        <li>Temperament: <%= sighting.creature_temperament %></li>
+        <li>Fear Struck (of 10): <%= sighting.fear_rating %> </li>
         </ul>
-    <% end %>
+      </div>
     </ul>
+  </div>
+    
+    <% end %>
+  <% end %>
+  
 </div>
 
 
+
 <div class='div3'>
-<<%= link_to 'Edit', edit_cryptid_path(@cryptid) %>>
+<%= link_to 'Edit', edit_cryptid_path(@cryptid) %>
 </div>
 
 </div>

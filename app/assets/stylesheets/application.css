@@ -286,7 +286,7 @@ ul.no-bullets {
   overflow: auto;
   display: flex;
   flex-flow: row wrap;
-  align-content: space-around;
+  align-content: space-evenly;
 
 }
 
