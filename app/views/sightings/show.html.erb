@@ -14,9 +14,15 @@
             <p><%= link_to 'Edit sighting', edit_sighting_path(@sighting) %>
         </div>
         <div class='column'>
-            <p> (put region map here)</p>
             <p><a href="https://www.google.com/maps/search/<%= @sighting.location.gsub(" ", "+") %>/" ">View <%= @sighting.location %> Map</a></p>
+            <p> <iframe src="<%= @sighting.region_map %>" width="640" height="480"></iframe></iframe></p>
+            
         </div>
     </div>
+
+
+
+
+
 
 
