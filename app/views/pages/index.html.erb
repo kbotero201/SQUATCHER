@@ -13,8 +13,9 @@
                     <h2 class='h2'><%= link_to sighting.date, sighting_path(sighting)  %></h2>
                     <hr>
                     <p>Location: <%= sighting.location %></p>
+                    <p>Spotted by: <%= link_to sighting.user.name, user_path(sighting.user) %></p>
                     <p>Fear Instilled: <%= sighting.fear_rating %></p>
-                    
+                
                 </div>     
             <% end %>
         </ul>

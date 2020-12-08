@@ -1,4 +1,4 @@
-<div style="height: 350px;">
+<div style="height: 580px;">
   <h1 class='h1'>Expedition: <%= @expedition.name %></h1>
   <br>
 
@@ -13,8 +13,8 @@
   
   </div>
   <div class='column'>
-  <p> (put region map here)</p>
-  <p><a href="https://www.google.com/maps/place/<%= @expedition.region %>/" ">View <%= @expedition.region %> Map</a></p>
+    
+    <p><iframe src="<%= @expedition.region_map %>" width="640" height="480"></iframe></iframe></p>
   </div>
 </div>
 
