@@ -1,7 +1,7 @@
 
 
 
-  <h1 class='h1'>Sighting: <%= @sighting.cryptid.name %></h1>
+  <h1 class='h1'>Sighting: <%= link_to @sighting.cryptid.name, cryptid_path(@sighting.cryptid) %></h1>
   <br>
     <div class='two-divs'>
         <div class='column'>
@@ -16,13 +16,6 @@
         <div class='column'>
             <p><a href="https://www.google.com/maps/search/<%= @sighting.location.gsub(" ", "+") %>/" ">View <%= @sighting.location %> Map</a></p>
             <p> <iframe src="<%= @sighting.region_map %>" width="640" height="480"></iframe></iframe></p>
-            
+
         </div>
     </div>
-
-
-
-
-
-
-
