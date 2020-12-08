@@ -1,26 +1,17 @@
-# README
+# Squatcher app notes/pitch
+Description: User is on a hunt for Bigfoot & his cryptozoological friends. They will be able to save their sightings into the database.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Relationship Chart
+User => Expedition <= Sighting <= Cryptid
 
-Things you may want to cover:
+# User Stories
+As a user, I can create, edit, and see my Expeditions 
 
-* Ruby version
+As a user, I can see create, edit, see, and asssign a sighting to my expedition
 
-* System dependencies
+As a user, I can login and logout
 
-* Configuration
+As a user, I can see other users expeditions and sightings without the ability to edit
 
-* Database creation
+As a user, I can see the cryptid handbook with information and images on all crytpids 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-#test read me 
