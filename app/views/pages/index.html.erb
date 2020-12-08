@@ -1,6 +1,12 @@
 <div class="threedivs-1">
 <div class="two-divs">
-<div>Welcome <%= @current_user.name %>, to where Sasquatches roam. Start your journey on Squatcher!</div>
+<div>
+<p>Welcome <% if @current_user %><%= @current_user.name %><% end %> to where Sasquatches roam. Start your journey on Squatcher!</p>
+<br>
+<p>If you have a cryptid sighting, add it to our tracker.  </p>
+
+
+</div>
 <div><div class="map"><%= render 'map' %></div></div>
 </div>
 
