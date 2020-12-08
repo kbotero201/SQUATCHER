@@ -3,5 +3,8 @@
 <h1> Edit Sighting: </h2>
 
 <%= render 'form' %>
+<div class="form-container">
+<%= button_to "Delete Sighting", sighting_path(@sighting), method: :delete, class: 'form-btn' %>
+</div>
 </div>
 </div>

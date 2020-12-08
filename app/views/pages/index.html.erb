@@ -1,1 +1,28 @@
-hey
+<div class="threedivs-1">
+<div class="two-divs">
+<div>
+<p>Welcome <% if @current_user %><%= @current_user.name %><% end %> to where Sasquatches roam. Start your journey on Squatcher!</p>
+<br>
+<p>If you have a cryptid sighting, add it to our tracker.  </p>
+
+
+</div>
+<div><div class="map"><%= render 'map' %></div></div>
+</div>
+
+
+<div class='user-container'>
+    <h2 class='h2'>Recent Sightings:</h2>
+        <ul class='no-bullets'>
+            <% Sighting.ten_most_recent.each do |sighting| %>
+                <div class='user-tile'>
+                    <h2 class='h2'><%= link_to sighting.date, sighting_path(sighting)  %></h2>
+                    <hr>
+                    <p>Location: <%= sighting.location %></p>
+                    <p>Spotted by: <%= link_to sighting.user.name, user_path(sighting.user) %></p>
+                    <p>Fear Instilled: <%= sighting.fear_rating %></p>
+                
+                </div>     
+            <% end %>
+        </ul>
+</div>

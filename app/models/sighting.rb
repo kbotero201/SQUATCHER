@@ -22,7 +22,8 @@ class Sighting < ApplicationRecord
         end 
     end 
 
+    def self.ten_most_recent
+        Sighting.all.last(10)
+    end
 
 end
-
-

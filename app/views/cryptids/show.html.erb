@@ -1,6 +1,6 @@
 <div class="three-divs"></div>
 
-<div class="threediv-1">
+<div class="threediv-1" style="margin-bottom: 50px">
     <h1> <%= @cryptid.name %> </h1>
     <br>
     <div class="two-divs">
@@ -12,26 +12,25 @@
 <div class='threediv-2'>
 <div class='user-container'>
   <h2 class='h2'>Sightings:</h2>
-  
-    <% @cryptid.sightings.each do |sighting| %>
-    
-      
-      <%= link_to sighting_path(sighting) do %>
-      <div class='expedition-tile'>
-      <ul class='no-bullets'> 
-      
-      <div class='clickable-expedition'>
-        <ul class='no-bullets'>
-        <li></li><%= sighting.date %>: </li>
-        <li>Location: <%= sighting.location %></li>
-        <li>Spotted by: <%= sighting.user.name %></li>
-        <li>Temperament: <%= sighting.creature_temperament %></li>
-        <li>Fear Struck (of 10): <%= sighting.fear_rating %> </li>
-        </ul>
-      </div>
-    </ul>
-  </div>
-    
+    <%if @cryptid.sightings %>
+        <% @cryptid.sightings.each do |sighting| %>
+        
+          <%= link_to sighting_path(sighting) do %>
+          <div class='expedition-tile'>
+          <ul class='no-bullets'> 
+          
+          <div class='clickable-expedition'>
+            <ul class='no-bullets'>
+            <li></li><%= sighting.date %>: </li>
+            <li>Location: <%= sighting.location %></li>
+            <li>Spotted by: <%= sighting.user.name %></li>
+            <li>Temperament: <%= sighting.creature_temperament %></li>
+            <li>Fear Struck (of 10): <%= sighting.fear_rating %> </li>
+            </ul>
+          </div>
+          </ul>
+          </div>
+        <% end %>
     <% end %>
   <% end %>
   
@@ -40,7 +39,7 @@
 
 
 <div class='div3'>
-<%= link_to 'Edit', edit_cryptid_path(@cryptid) %>
+
 </div>
 
 </div>

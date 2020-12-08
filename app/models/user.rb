@@ -10,3 +10,6 @@ class User < ApplicationRecord
 
 
 end
+
+
+

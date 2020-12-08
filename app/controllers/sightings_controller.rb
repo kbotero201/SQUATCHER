@@ -42,7 +42,7 @@ class SightingsController < ApplicationController
     def destroy
         find_sighting
         @sighting.destroy
-        redirect_to sightings_path
+        redirect_to user_path(@current_user)
     end
 
     private

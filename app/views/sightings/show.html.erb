@@ -1,7 +1,7 @@
 
 
 
-  <h1 class='h1'>Sighting: <%= @sighting.cryptid.name %></h1>
+  <h1 class='h1'>Sighting: <%= link_to @sighting.cryptid.name, cryptid_path(@sighting.cryptid) %></h1>
   <br>
     <div class='two-divs'>
         <div class='column'>
@@ -10,8 +10,11 @@
             <p><b>Location:</b> <%= @sighting.location %> </p>
             <p><b>Spotted by:</b> <%= link_to @sighting.user.name, user_path(@sighting.user) %></p>
             <p><b>Fear Rating (out of 10):</b> <%= @sighting.fear_rating %></p>
+            <p><b>Creature Temperament:</b> <%= @sighting.creature_temperament %></p>
             <p><b>Description of Events:</b> <%= @sighting.description  %></p>
+            <% if @current_user == @sighting.user%>
             <p><%= link_to 'Edit sighting', edit_sighting_path(@sighting) %>
+            <% end %>
         </div>
         <div class='column'>
             <p><a href="https://www.google.com/maps/search/<%= @sighting.location.gsub(" ", "+") %>/" ">View <%= @sighting.location %> Map</a></p>
@@ -19,9 +22,6 @@
             
         </div>
     </div>
-
-
-
 
 
 

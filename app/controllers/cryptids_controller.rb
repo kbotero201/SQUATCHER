@@ -50,7 +50,7 @@ class CryptidsController < ApplicationController
     end
 
     def cryptid_params
-        params.require(:cryptid).permit(:name)
+        params.require(:cryptid).permit(:name, :description)
     end
 
 end
