@@ -1,39 +1,17 @@
-DJ-CLI app notes/pitch
-Description: An app where users can learn and practice day trading with false money. Try to top the leaderboard and compete with friends!
+# Squatcher app notes/pitch
+Description: User is on a hunt for Bigfoot & his cryptozoological friends. They will be able to save their sightings into the database.
 
-Utilize Alpha Advantage Stock Data Api, JSON gem, & TTY prompt gem.
+# Relationship Chart
+User => Expedition <= Sighting <= Cryptid
 
-Models, Attributes, and Associations
-User: username, password
+# User Stories
+As a user, I can create, edit, and see my Expeditions 
 
-Spi: stock_symbol
+As a user, I can see create, edit, see, and asssign a sighting to my expedition
 
-Game: user_id, spi_id, date, user_balance
+As a user, I can login and logout
 
-User has_many Games
+As a user, I can see other users expeditions and sightings without the ability to edit
 
-User has_many Spis through Games
+As a user, I can see the cryptid handbook with information and images on all crytpids 
 
-Game belongs_to User
-
-Game belongs_to Spi
-
-Spi has_many Games
-
-Spi has_many Users through Games
-
-Relationship Chart
-User => Game <= Spi (stock)
-
-User Stories
-As a user, I can see my highscore
-
-As a user, I can see the leaderboard and see how I compare to other users that played
-
-As a user, I can buy, sell, or hold my stock for each hour
-
-As a user, I can see hour by hour updates on my stocks price, RSI, MACD, percentage loss/gain, and user balance
-
-As a user, I can enter a cheat code and change my own highscore
-
-As a user, I can enter a cheat code and delete another users highscore
